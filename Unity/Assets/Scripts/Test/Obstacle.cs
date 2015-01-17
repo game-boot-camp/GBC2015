@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Obstacle : MonoBehaviour {
 
-	private float speed = 2.0f;
-
 	// Use this for initialization
 	void Start () {
 		this.transform.localPosition = new Vector3(568, Random.Range(-320, 320), 0);
@@ -13,6 +11,8 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		float speed = GameObject.Find("GameScript").GetComponent<ScrollManager>().scrollSpeed;
+
 		this.gameObject.transform.localPosition += new Vector3 (-speed, 0, 0);
 
 		if (this.gameObject.transform.localPosition.x <= -600f) {
