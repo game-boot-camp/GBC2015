@@ -53,12 +53,12 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-	public void Damage() {
+	public void LifeUp() {
 		Life = Mathf.Min(1.0f, this.Life + 0.2f);
 		Debug.Log("Life: " + Life);
     }
 
-	public void LifeUp() {
+	public void Damage() {
 		Life -= 0.2f;
 		Debug.Log("Life: " + Life);
     }
