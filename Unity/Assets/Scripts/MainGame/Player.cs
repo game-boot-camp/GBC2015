@@ -37,10 +37,17 @@ public class Player : MonoBehaviour {
 			message = "Damage";
 			gameManager.Damage();
 			break;
+		case Item.ItemType.DamageStrong:
+			gameManager.DamageStrong();
+			break;
 		case Item.ItemType.LifeUp:
 			message = "LifeUp";
 			gameManager.LifeUp();
 			break;
+		case Item.ItemType.LifeUpStrong:
+			message = "LifeUpStrong";
+			gameManager.LifeUpStrong();
+            break;
 		case Item.ItemType.SpeedDown:
 			message = "SpeedDown";
 			scrollManager.SpeedDown();
@@ -48,6 +55,10 @@ public class Player : MonoBehaviour {
 		case Item.ItemType.SpeedUp:
 			message = "SpeedUp";
 			scrollManager.SpeedUp ();
+            break;
+		case Item.ItemType.AngleUp:
+			message = "AngleUp";
+			// TODO:
             break;
 		case Item.ItemType.ChangePosition:
 			message = "ChangePosition";

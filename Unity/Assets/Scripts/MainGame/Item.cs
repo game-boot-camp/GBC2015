@@ -4,10 +4,15 @@ using System.Collections;
 public class Item : MonoBehaviour {
 	public enum ItemType {
 		Damage,
+		DamageStrong,
 		LifeUp,
+		LifeUpStrong,
 		SpeedUp,
 		SpeedDown,
+		AngleUp,
 		ChangePosition,
+		SpecialColor,
+		SpecialShape,
 	}
 
 	public ItemType type;
