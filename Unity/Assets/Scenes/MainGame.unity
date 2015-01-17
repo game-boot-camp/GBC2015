@@ -1320,13 +1320,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 174
+  mWidth: 176
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.625
+  aspectRatio: 3.70833325
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -2044,7 +2044,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
-  mWidth: 90
+  mWidth: 92
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
@@ -2168,7 +2168,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .75
+  aspectRatio: .791666687
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -3544,19 +3544,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414168, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: aspectRatio
-      value: 3.625
+      value: 3.70833325
       objectReference: {fileID: 0}
     - target: {fileID: 11414176, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: aspectRatio
-      value: .75
+      value: .791666687
       objectReference: {fileID: 0}
     - target: {fileID: 11414168, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: mWidth
-      value: 178
+      value: 176
       objectReference: {fileID: 0}
     - target: {fileID: 11414166, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: mWidth
-      value: 90
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 11414166, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: aspectRatio
@@ -3564,7 +3564,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11414176, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
       propertyPath: mWidth
-      value: 38
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
