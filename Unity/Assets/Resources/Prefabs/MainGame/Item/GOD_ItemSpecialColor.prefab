@@ -58,6 +58,7 @@ GameObject:
   - 61: {fileID: 6190218}
   - 50: {fileID: 5090218}
   - 114: {fileID: 11490218}
+  - 114: {fileID: 11429530}
   m_Layer: 5
   m_Name: GOD_ItemSpecialColor
   m_TagString: Untagged
@@ -142,6 +143,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 64, y: 64}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11429530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf45d8e34a05468ba44d271b3855182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11490214
 MonoBehaviour:
   m_ObjectHideFlags: 1

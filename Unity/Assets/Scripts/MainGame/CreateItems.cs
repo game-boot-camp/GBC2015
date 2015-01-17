@@ -16,10 +16,10 @@ public class CreateItems : MonoBehaviour {
 		"Prefabs/MainGame/Item/GOD_ItemLifeUpStrong",
 		"Prefabs/MainGame/Item/GOD_ItemSpeedDown",
 		"Prefabs/MainGame/Item/GOD_ItemSpeedUp",
-		"Prefabs/MainGame/Item/GOD_ItemAngleUp",
-        "Prefabs/MainGame/Item/GOD_ItemChangePosition",
+//		"Prefabs/MainGame/Item/GOD_ItemAngleUp",
+//        "Prefabs/MainGame/Item/GOD_ItemChangePosition",
 		"Prefabs/MainGame/Item/GOD_ItemSpecialColor",
-		"Prefabs/MainGame/Item/GOD_ItemSpecialShape",
+//		"Prefabs/MainGame/Item/GOD_ItemSpecialShape",
     };
     private const string GO_PARENT = "UI Root/Camera/Panel";
 

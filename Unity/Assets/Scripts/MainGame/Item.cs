@@ -31,8 +31,10 @@ public class Item : MonoBehaviour {
 			GameObject.Destroy(this.gameObject);
 		}
 	}
-	
-    void OnTriggerEnter2D() {
-        GameObject.Destroy (this.gameObject);
+
+    void OnTriggerEnter2D(Collider2D go) {
+		if (go.GetComponent<Player>() != null) {
+        	GameObject.Destroy (this.gameObject);
+		}
     }
 }
