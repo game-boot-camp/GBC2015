@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		//  scroll
-		float speed = scrollManager.scrollSpeed;
+		float speed = scrollManager.scrollSpeed * Time.deltaTime;
 		scrollDistance += speed;
 		totalDistance += speed;
 		goBackground.transform.localPosition += new Vector3(-speed, 0, 0);
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour {
 
 		// score
 		Score += Time.deltaTime;
-		GameObject.Find(SCORE_PATH).GetComponent<UILabel>().text = string.Format("{0:f3}m", Score);
+		GameObject.Find(SCORE_PATH).GetComponent<UILabel>().text = string.Format("{0:f3}", Score);
 
 		// life
 		Life -= 0.02f * Time.deltaTime;

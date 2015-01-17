@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ScrollManager : MonoBehaviour {
-	public float scrollSpeed = 2.0f;
+	public float scrollSpeed;
 
 	// Use this for initialization
 	void Start () {

@@ -23,7 +23,7 @@ public class Item : MonoBehaviour {
 	}
 	
 	void Update() {
-		float speed = GameObject.Find("GameScript").GetComponent<ScrollManager>().scrollSpeed;
+		float speed = GameObject.Find("GameScript").GetComponent<ScrollManager>().scrollSpeed * Time.deltaTime;
 
 		this.gameObject.transform.localPosition += new Vector3 (-speed, 0, 0);
 		
