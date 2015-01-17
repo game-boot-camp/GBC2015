@@ -57,7 +57,7 @@ GameObject:
   - 4: {fileID: 410818}
   - 61: {fileID: 6110812}
   - 50: {fileID: 5010812}
-  - 114: {fileID: 11410816}
+  - 114: {fileID: 11463980}
   m_Layer: 5
   m_Name: GOD_ItemSpeedDown
   m_TagString: Untagged
@@ -252,7 +252,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
---- !u!114 &11410816
+--- !u!114 &11463980
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -260,9 +260,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 110818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd01915647114524889cdb2df7741c90, type: 3}
+  m_Script: {fileID: 11500000, guid: 111af7de35880470dae12a8170a5f1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
