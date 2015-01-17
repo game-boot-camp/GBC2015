@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
 	private GameObject goAttach;
 	private ScrollManager scrollManager;
     
-	private const float SCREEN_WIDTH = 1136;
+	private const float SCREEN_WIDTH = 1136.0f;
 
 	public float Score { get; private set; }
 	public float Life { get; private set; }

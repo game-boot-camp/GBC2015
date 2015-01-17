@@ -5,7 +5,13 @@ public class Player : MonoBehaviour {
 	private GameManager gameManager;
 	private ScrollManager scrollManager;
 
-	private Vector3 speed = new Vector3(0, 2f, 0);
+	private const float NORMAL_SPEED = 2.0f;
+	private const float HIGH_SPEED = 6.0f;
+
+	private int direction = 1;
+	private float speed = 2.0f;
+
+	private float highSpeedTimeRest = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,18 +22,34 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.localPosition += speed;
+		ChangeDirectionIfNeeded();
 
-		if (this.transform.localPosition.y >= 200 || this.transform.localPosition.y <= -200)
-			speed *= -1;	
-	}
+		if (highSpeedTimeRest > 0.0f) {
+			highSpeedTimeRest -= Time.deltaTime;
+			if (highSpeedTimeRest < 0.0f) {
+				highSpeedTimeRest = 0;
+				speed = NORMAL_SPEED;
+			}
+		}
+
+		this.transform.localPosition += new Vector3(0, speed * direction, 0);
+    }
 
 	//　画面がタップをされた際の処理
 	void TapAction() {
-		speed *= -1;
-	}
+		direction = -direction;
+		ChangeDirectionIfNeeded();
+    }
 
-	//　物体の衝突時の処理
+	private void ChangeDirectionIfNeeded() {
+		if (this.transform.localPosition.y >= 200) {
+			direction = -1;
+		} else if (this.transform.localPosition.y <= -200) {
+			direction = 1;
+        }
+    }
+    
+    //　物体の衝突時の処理
 	void OnTriggerEnter2D(Collider2D go) {
 		Item item = (Item)go.gameObject.GetComponent(typeof(Item));
 		string message = "";
@@ -58,14 +80,25 @@ public class Player : MonoBehaviour {
             break;
 		case Item.ItemType.AngleUp:
 			message = "AngleUp";
-			// TODO:
+			ItemAngleUp();
             break;
 		case Item.ItemType.ChangePosition:
 			message = "ChangePosition";
 			ItemChangePosition();
 			break;
+		case Item.ItemType.SpecialColor:
+			message = "SpecialColor";
+			break;
+		case Item.ItemType.SpecialShape:
+			message = "SpecialShape";
+			break;
         }
         Debug.Log(message + " " + this.gameObject.name + "←" + go.gameObject.name);
+	}
+
+	private void ItemAngleUp() {
+		speed = HIGH_SPEED;
+		highSpeedTimeRest = 6.0f;
 	}
 
 	private void ItemChangePosition() {
