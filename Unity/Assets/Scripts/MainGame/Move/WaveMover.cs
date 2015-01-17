@@ -15,6 +15,6 @@ public class WaveMover : MonoBehaviour {
 		if (pauseState.paused) { return; }
 
 		time += Time.deltaTime;
-		gameObject.transform.localPosition += new Vector3(-1.0f, Mathf.Sin(time * 4.0f) * 3.0f, 0.0f);
+		gameObject.transform.localPosition += new Vector3(-100.0f * Time.deltaTime, Mathf.Sin(time * 4.0f) * 300.0f * Time.deltaTime, 0.0f);
 	}
 }

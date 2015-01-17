@@ -6,7 +6,7 @@ public class ReflectMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		speed = (Random.value - 0.5f) * 5;
+		speed = (Random.value - 0.5f) * 500;
 	}
 	
 	// Update is called once per frame
@@ -14,7 +14,7 @@ public class ReflectMover : MonoBehaviour {
 		PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
 		if (pauseState.paused) { return; }
 
-		gameObject.transform.localPosition += new Vector3(-1f, speed, 0.0f);
+		gameObject.transform.localPosition += new Vector3(-100f * Time.deltaTime, speed * Time.deltaTime, 0.0f);
 		if ((this.transform.localPosition.y >= 200 && speed > 0f) || (this.transform.localPosition.y <= -200 && speed < 0f)) {
 			speed = -speed;
 		}
