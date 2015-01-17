@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_Damage
-    x: 64
-    y: 92
+    x: 868
+    y: 678
     width: 64
     height: 64
     borderLeft: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Item_LifeUp
+  - name: Item_DamageStrong01
     x: 129
     y: 92
     width: 64
@@ -80,9 +80,87 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Item_SpecialColor
+  - name: Item_DamageStrong02
+    x: 64
+    y: 92
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_DamageStrong03
+    x: 933
+    y: 743
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_LifeUp
+    x: 868
+    y: 613
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_LifeUpStrong01
     x: 64
     y: 27
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_LifeUpStrong02
+    x: 129
+    y: 27
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_LifeUpStrong03
+    x: 868
+    y: 743
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_SpecialColor
+    x: 933
+    y: 678
     width: 64
     height: 64
     borderLeft: 0
@@ -107,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpecialColorFx02
-    x: 868
-    y: 694
+    x: 217
+    y: 477
     width: 32
     height: 48
     borderLeft: 0
@@ -120,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpeedDown
-    x: 129
-    y: 27
+    x: 933
+    y: 613
     width: 64
     height: 64
     borderLeft: 0
@@ -133,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpeedUp
-    x: 868
-    y: 743
+    x: 217
+    y: 526
     width: 64
     height: 64
     borderLeft: 0
@@ -289,8 +367,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Sheep_Horn03
-    x: 933
-    y: 768
+    x: 282
+    y: 551
     width: 65
     height: 39
     borderLeft: 0
