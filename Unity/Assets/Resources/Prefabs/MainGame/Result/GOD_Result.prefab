@@ -58,6 +58,7 @@ GameObject:
   - 65: {fileID: 6507208}
   - 114: {fileID: 11407214}
   - 114: {fileID: 11407212}
+  - 114: {fileID: 11459036}
   m_Layer: 5
   m_Name: BTN_End
   m_TagString: Untagged
@@ -123,6 +124,7 @@ GameObject:
   - 65: {fileID: 6507212}
   - 114: {fileID: 11407220}
   - 114: {fileID: 11407222}
+  - 114: {fileID: 11459034}
   m_Layer: 5
   m_Name: BTN_Retry
   m_TagString: Untagged
@@ -171,6 +173,7 @@ GameObject:
   - 4: {fileID: 407228}
   - 114: {fileID: 11407226}
   - 54: {fileID: 5407208}
+  - 111: {fileID: 11159036}
   m_Layer: 5
   m_Name: GOD_Result
   m_TagString: Untagged
@@ -516,6 +519,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 180, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &11159036
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107228}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 95c882d8a9a23804697f8ab8ba5d2ebe, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 95c882d8a9a23804697f8ab8ba5d2ebe, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11407208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1102,6 +1120,30 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
+--- !u!114 &11459034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainGame
+--- !u!114 &11459036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SelectMenu
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
