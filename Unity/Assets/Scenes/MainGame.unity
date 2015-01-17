@@ -2620,6 +2620,45 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
+--- !u!1 &1448067153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1448067155}
+  - 114: {fileID: 1448067154}
+  m_Layer: 0
+  m_Name: Pause
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1448067154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1448067153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046ec21bce17148dbb18db61a20f503f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1448067155
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1448067153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .284838647, y: -.0491829365, z: -1.72167969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &1460744264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,6 +3861,7 @@ GameObject:
   - 65: {fileID: 1973906313}
   - 114: {fileID: 1973906312}
   - 114: {fileID: 1973906311}
+  - 114: {fileID: 1973906314}
   m_Layer: 5
   m_Name: BTN_Stop
   m_TagString: Untagged
@@ -3891,6 +3931,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1973906314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973906309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1448067153}
+  functionName: PauseSwitch
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &1998469178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,7 +4046,7 @@ Transform:
   m_Children:
   - {fileID: 788392844}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2032640820
 GameObject:
   m_ObjectHideFlags: 0
