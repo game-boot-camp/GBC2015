@@ -1,14 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &142458
+--- !u!1 &126670
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 442458}
-  - 114: {fileID: 11442458}
+  - 4: {fileID: 426670}
+  - 114: {fileID: 11426670}
   m_Layer: 5
   m_Name: SPR_Back03
   m_TagString: Untagged
@@ -16,15 +16,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &142460
+--- !u!1 &126672
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 442460}
-  - 114: {fileID: 11442460}
+  - 4: {fileID: 426672}
+  - 114: {fileID: 11426672}
   m_Layer: 5
   m_Name: SPR_Back02
   m_TagString: Untagged
@@ -32,15 +32,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &142462
+--- !u!1 &126674
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 442462}
-  - 114: {fileID: 11442462}
+  - 4: {fileID: 426674}
+  - 114: {fileID: 11426674}
   m_Layer: 5
   m_Name: SPR_Back01
   m_TagString: Untagged
@@ -48,78 +48,78 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &142464
+--- !u!1 &126676
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 442464}
+  - 4: {fileID: 426676}
   m_Layer: 5
-  m_Name: GOD_StageStart
+  m_Name: GOD_02StageChild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &442458
+--- !u!4 &426670
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142458}
+  m_GameObject: {fileID: 126670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 92, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 442464}
+  m_Father: {fileID: 426676}
   m_RootOrder: 2
---- !u!4 &442460
+--- !u!4 &426672
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142460}
+  m_GameObject: {fileID: 126672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -94, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 442464}
+  m_Father: {fileID: 426676}
   m_RootOrder: 1
---- !u!4 &442462
+--- !u!4 &426674
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142462}
+  m_GameObject: {fileID: 126674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -330, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 442464}
+  m_Father: {fileID: 426676}
   m_RootOrder: 0
---- !u!4 &442464
+--- !u!4 &426676
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142464}
+  m_GameObject: {fileID: 126676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 442462}
-  - {fileID: 442460}
-  - {fileID: 442458}
+  - {fileID: 426674}
+  - {fileID: 426672}
+  - {fileID: 426670}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11442458
+--- !u!114 &11426670
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142458}
+  m_GameObject: {fileID: 126670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
@@ -162,12 +162,12 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
---- !u!114 &11442460
+--- !u!114 &11426672
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142460}
+  m_GameObject: {fileID: 126672}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
@@ -210,12 +210,12 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
---- !u!114 &11442462
+--- !u!114 &11426674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142462}
+  m_GameObject: {fileID: 126674}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
@@ -247,7 +247,7 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: .911877394
   mAtlas: {fileID: 11406920, guid: 316c4dea7cf60eb47902f4cfa655c875, type: 2}
-  mSpriteName: Stage_BackEnd
+  mSpriteName: Stage_BackCenter
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -267,6 +267,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 142464}
+  m_RootGameObject: {fileID: 126676}
   m_IsPrefabParent: 1
   m_IsExploded: 1
