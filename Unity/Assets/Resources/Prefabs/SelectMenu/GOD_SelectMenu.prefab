@@ -59,6 +59,7 @@ GameObject:
   - 65: {fileID: 6507172}
   - 114: {fileID: 11407142}
   - 114: {fileID: 11407144}
+  - 114: {fileID: 11466110}
   m_Layer: 5
   m_Name: BTN_SinglePlay
   m_TagString: Untagged
@@ -92,6 +93,7 @@ GameObject:
   - 65: {fileID: 6507174}
   - 114: {fileID: 11407148}
   - 114: {fileID: 11407146}
+  - 114: {fileID: 11466108}
   m_Layer: 5
   m_Name: BTN_MultiPlay
   m_TagString: Untagged
@@ -174,6 +176,7 @@ GameObject:
   - 65: {fileID: 6507176}
   - 114: {fileID: 11407158}
   - 114: {fileID: 11407160}
+  - 114: {fileID: 11408222}
   m_Layer: 5
   m_Name: BTN_PictureBook
   m_TagString: Untagged
@@ -192,6 +195,7 @@ GameObject:
   - 65: {fileID: 6507178}
   - 114: {fileID: 11407164}
   - 114: {fileID: 11407162}
+  - 114: {fileID: 11408224}
   m_Layer: 5
   m_Name: BTN_Record
   m_TagString: Untagged
@@ -274,6 +278,7 @@ GameObject:
   - 65: {fileID: 6507180}
   - 114: {fileID: 11407174}
   - 114: {fileID: 11407176}
+  - 114: {fileID: 11408226}
   m_Layer: 5
   m_Name: BTN_Score
   m_TagString: Untagged
@@ -385,6 +390,7 @@ GameObject:
   - 65: {fileID: 6582266}
   - 114: {fileID: 11482264}
   - 114: {fileID: 11482266}
+  - 114: {fileID: 11408228}
   m_Layer: 5
   m_Name: BTN_HowToPlay
   m_TagString: Untagged
@@ -1617,7 +1623,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 310
   mHeight: 226
-  mDepth: 0
+  mDepth: 10
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1665,7 +1671,7 @@ MonoBehaviour:
   mPivot: 3
   mWidth: 336
   mHeight: 116
-  mDepth: 1
+  mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1694,6 +1700,78 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &11408222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: PictureBook
+--- !u!114 &11408224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Record
+--- !u!114 &11408226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Score
+--- !u!114 &11408228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: HowToPlay
+--- !u!114 &11466108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SelectChara
+--- !u!114 &11466110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: SelectChara
 --- !u!114 &11482256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1725,7 +1803,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 742
   mHeight: 172
-  mDepth: 0
+  mDepth: 10
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0

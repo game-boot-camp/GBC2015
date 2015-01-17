@@ -168,6 +168,7 @@ GameObject:
   - 65: {fileID: 6588758}
   - 114: {fileID: 11488716}
   - 114: {fileID: 11488718}
+  - 114: {fileID: 11459210}
   m_Layer: 5
   m_Name: BTN_SinglePlay
   m_TagString: Untagged
@@ -1175,6 +1176,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11459210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb56cd9f122a1d4ba4088c7bd840fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainGame
 --- !u!114 &11488702
 MonoBehaviour:
   m_ObjectHideFlags: 1
