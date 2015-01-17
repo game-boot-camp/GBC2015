@@ -42,6 +42,7 @@ GameObject:
   - 61: {fileID: 6108184}
   - 50: {fileID: 5008184}
   - 114: {fileID: 11408184}
+  - 111: {fileID: 11177050}
   m_Layer: 5
   m_Name: GOD_ItemChangePosition
   m_TagString: Untagged
@@ -113,6 +114,21 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 64, y: 64}
   m_Center: {x: 0, y: 0}
+--- !u!111 &11177050
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 49c34deb80e0d114c9461b2e187ad980, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 49c34deb80e0d114c9461b2e187ad980, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11408182
 MonoBehaviour:
   m_ObjectHideFlags: 1

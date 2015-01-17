@@ -55,7 +55,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Score_Back01
-    x: 697
+    x: 0
     y: 352
     width: 696
     height: 136
@@ -69,7 +69,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Score_Back02
     x: 0
-    y: 78
+    y: 215
     width: 696
     height: 136
     borderLeft: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Score_Back03
     x: 0
-    y: 352
+    y: 78
     width: 696
     height: 136
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Score_Back04
-    x: 0
-    y: 215
+    x: 697
+    y: 352
     width: 696
     height: 136
     borderLeft: 0
