@@ -11,6 +11,14 @@ public class ScrollManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		scrollSpeed += 0.01f; // test
+//		scrollSpeed += 0.01f; // test
+	}
+
+	public void SpeedUp() {
+		scrollSpeed *= 1.2f;
+	}
+
+	public void SpeedDown() {
+		scrollSpeed /= 1.2f;
 	}
 }

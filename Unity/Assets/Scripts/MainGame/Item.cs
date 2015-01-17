@@ -6,11 +6,10 @@ public class Item : MonoBehaviour {
 		Damage,
 		LifeUp,
 		SpeedUp,
-		SpeedDown
+		SpeedDown,
+		ChangePosition,
 	}
 
-	private const float SPEED = 2.0f;
-	
 	public ItemType type;
 	
 	void Start() {
@@ -19,7 +18,9 @@ public class Item : MonoBehaviour {
 	}
 	
 	void Update() {
-		this.gameObject.transform.localPosition += new Vector3 (-SPEED, 0, 0);
+		float speed = GameObject.Find("GameScript").GetComponent<ScrollManager>().scrollSpeed;
+
+		this.gameObject.transform.localPosition += new Vector3 (-speed, 0, 0);
 		
 		if (this.gameObject.transform.localPosition.x <= -600f) {
 			GameObject.Destroy(this.gameObject);

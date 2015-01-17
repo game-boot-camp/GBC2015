@@ -13,7 +13,8 @@ public class ObjCreateRandom : MonoBehaviour {
 		"Prefabs/MainGame/Item/GOD_ItemDamage",
 		"Prefabs/MainGame/Item/GOD_ItemLifeUp",
 		"Prefabs/MainGame/Item/GOD_ItemSpeedDown",
-		"Prefabs/MainGame/Item/GOD_ItemSpeedUp"
+		"Prefabs/MainGame/Item/GOD_ItemSpeedUp",
+		"Prefabs/MainGame/Item/GOD_ItemChangePosition"
 	};
 	private const string GO_PARENT = "UI Root/Camera/Panel";
 
