@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-public class ObjCreateRandom : MonoBehaviour {
+public class CreateItems : MonoBehaviour {
 	private GameObject[] goItems;
 	private GameObject goCreated;
 	private GameObject goParent;
