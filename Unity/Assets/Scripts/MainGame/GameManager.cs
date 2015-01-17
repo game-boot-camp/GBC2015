@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";
 	private const string SCORE_PATH = "UI Root/Camera/Panel/GOD_GameMenu/GOD_Score/TXT_Score";
-	private const string STAGE_CHILD_PREFAB_PATH = "Prefabs/MainGame/Stage/GOD_02StageChild";
+	private const string STAGE_CHILD_PREFAB_PATH = "Prefabs/MainGame/Stage/GOD_StageChild";
 	private const string ORBIT_PREFAB_PATH = "Prefabs/MainGame/Chara/GOD_Orbit";
 
 	public float Score { get; private set; }
