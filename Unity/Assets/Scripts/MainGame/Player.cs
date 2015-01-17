@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 	private GameManager gameManager;
 	private ScrollManager scrollManager;
+	private GameObject colorChangeObject;
 
 	private const float NORMAL_SPEED = 150.0f;
 	private const float HIGH_SPEED = 500.0f;
@@ -13,11 +14,15 @@ public class Player : MonoBehaviour {
 
 	private float highSpeedTimeRest = 0.0f;
 
+	public Color color { get; set; }
+
 	// Use this for initialization
 	void Start () {
 		GameObject gameScript = GameObject.Find("GameScript");
 		gameManager = gameScript.GetComponent<GameManager>();
 		scrollManager = gameScript.GetComponent<ScrollManager>();
+		colorChangeObject = gameObject.FindInChildrenWithTag("ColorChangeObject");
+		color = Color.white;
 	}
 	
 	// Update is called once per frame
@@ -30,6 +35,9 @@ public class Player : MonoBehaviour {
 				highSpeedTimeRest = 0;
 				speed = NORMAL_SPEED;
 			}
+		}
+		if (colorChangeObject != null) {
+			colorChangeObject.GetComponent<UISprite>().color = color;
 		}
 
 		this.transform.localPosition += new Vector3(0, speed * direction * Time.deltaTime, 0);
@@ -88,6 +96,7 @@ public class Player : MonoBehaviour {
 			break;
 		case Item.ItemType.SpecialColor:
 			message = "SpecialColor";
+			color = new Color(Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F));
 			break;
 		case Item.ItemType.SpecialShape:
 			message = "SpecialShape";

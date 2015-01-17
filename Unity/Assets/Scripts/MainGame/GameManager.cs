@@ -87,14 +87,17 @@ public class GameManager : MonoBehaviour {
 		orbitTime += Time.deltaTime;
 		if (orbitTime >= ORBIT_DROP_INTERVAL) {
 			UnityEngine.Object.FindObjectsOfType<Player>()
-							  .Select(p => (Vector2)p.gameObject.transform.localPosition)
 							  .ToList()
 							  .ForEach(p => 
 									{
 										 GameObject orbit = (GameObject)Instantiate(orbitTemplate);
 										 orbit.transform.parent = goBackground.transform;
-										 orbit.transform.localPosition = new Vector2(totalDistance, 0.0F) + p;
+						orbit.transform.localPosition = new Vector2(totalDistance, 0.0F) + (Vector2)p.gameObject.transform.localPosition;
 										 orbit.transform.localScale = new Vector3(1f, 1f, 1f);
+										 GameObject cco = orbit.FindInChildrenWithTag("ColorChangeObject");
+										 if (cco != null) {
+											 cco.GetComponent<UISprite>().color = p.color;
+										  }
 							  		});
 			orbitTime = 0.0F;
 		}
