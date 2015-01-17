@@ -5,11 +5,10 @@ public class Obstacle : MonoBehaviour {
 
 	private float speed = 2.0f;
 
-
 	// Use this for initialization
 	void Start () {
 		this.transform.localPosition = new Vector3(568, Random.Range(-320, 320), 0);
-		this.transform.localScale = new Vector3(1f, 1f, 1f);	
+		this.transform.localScale = new Vector3(1f, 1f, 1f);
 	}
 	
 	// Update is called once per frame
