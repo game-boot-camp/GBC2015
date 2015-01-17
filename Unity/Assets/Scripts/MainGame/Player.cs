@@ -5,11 +5,11 @@ public class Player : MonoBehaviour {
 	private GameManager gameManager;
 	private ScrollManager scrollManager;
 
-	private const float NORMAL_SPEED = 2.0f;
-	private const float HIGH_SPEED = 6.0f;
+	private const float NORMAL_SPEED = 150.0f;
+	private const float HIGH_SPEED = 500.0f;
 
 	private int direction = 1;
-	private float speed = 2.0f;
+	private float speed = 200.0f;
 
 	private float highSpeedTimeRest = 0.0f;
 
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
 			}
 		}
 
-		this.transform.localPosition += new Vector3(0, speed * direction, 0);
+		this.transform.localPosition += new Vector3(0, speed * direction * Time.deltaTime, 0);
     }
 
 	//　画面がタップをされた際の処理
