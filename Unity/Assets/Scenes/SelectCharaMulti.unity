@@ -1434,6 +1434,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 962801213}
+  - 114: {fileID: 962801214}
   m_Layer: 0
   m_Name: GameScript
   m_TagString: Untagged
@@ -1453,6 +1454,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &962801214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962801212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36417b55e5384b199c3089e7ae48116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCount: 2
 --- !u!1 &1019649043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,7 +2246,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
@@ -2493,7 +2506,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
@@ -2854,7 +2867,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
@@ -3202,6 +3215,22 @@ Prefab:
       propertyPath: aspectRatio
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478472, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478552, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
   m_RootGameObject: {fileID: 372232336}
@@ -3532,7 +3561,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0

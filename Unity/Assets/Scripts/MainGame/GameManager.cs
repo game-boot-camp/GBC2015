@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (Global.playerCount == 1) {
+			GameObject.Find ("UI Root/Camera/Panel/GOD_Player02").SetActive(false);
+		}
+
 		goBackground = GameObject.Find(STAGE_PARENT_PATH);
 		goAttach = GameObject.Find(ATTACH_PATH);
         
