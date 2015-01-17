@@ -58,6 +58,19 @@ public class Player : MonoBehaviour {
 	}
 
 	private void ItemChangePosition() {
+		foreach (Player player in GameObject.FindObjectsOfType(typeof(Player))) {
+			TweenRotation rotation = player.gameObject.AddComponent<TweenRotation>();
+			rotation.from = new Vector3(0, 0, 0);
+			rotation.to = new Vector3(0, 180, 0);
+			rotation.duration = 0.2f;
+
+			rotation = player.gameObject.AddComponent<TweenRotation>();
+			rotation.from = new Vector3(0, 180, 0);
+			rotation.to = new Vector3(0, 360, 0);
+			rotation.duration = 0.2f;
+			rotation.delay = 0.2f;
+		}
+
 		UIButtonMessage button1 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>();
 		UIButtonMessage button2 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>();
 
