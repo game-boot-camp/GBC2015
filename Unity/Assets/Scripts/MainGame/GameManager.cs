@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
+		if (pauseState.paused) { return; }
+
 		// score
 		Score += Time.deltaTime;
 		GameObject.Find("UI Root/Camera/Panel/GOD_GameMenu/GOD_Score/TXT_Score").GetComponent<UILabel>().text = string.Format("{0:f3}m", Score);
@@ -42,6 +45,11 @@ public class GameManager : MonoBehaviour {
 			goStageChild.transform.parent = goAttach.transform;
 			goStageChild.transform.localScale = new Vector3(1f, 1f, 1f);
             goAttach.GetComponent<UIGrid>().Reposition();
+		}
+
+		//  dead
+		if (Life < 0) {
+			pauseState.Pause();
 		}
 	}
 

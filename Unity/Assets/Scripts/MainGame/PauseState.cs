@@ -74,7 +74,7 @@ public class PauseState : MonoBehaviour {
 		}
 	}
 
-	private bool paused;
+	public bool paused { get; private set; }
 	private List<IPausable> pauseObjects;
 
 	void PauseSwitch() {
