@@ -11,8 +11,9 @@ public class GameManager : MonoBehaviour {
 	private ScrollManager scrollManager;
     
 	private const float SCREEN_WIDTH = 1136.0f;
-	private const int ORBIT_DROP_FRAME_COUNT = 10;
-	private const int END_ANIMATION_FRAME_COUNT = 60;
+	private const float ORBIT_DROP_INTERVAL = 10.0F / 60.0F;
+	private const float END_ANIMATION_INTERVAL = 1.0F;
+	private const float START_ANIMATION_INTERVAL = 1.0F;
 	private const string PANEL_PATH = "UI Root/Camera/Panel";
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";
@@ -26,9 +27,11 @@ public class GameManager : MonoBehaviour {
 	public float Life { get; private set; }
 	private float scrollDistance = SCREEN_WIDTH;
 	private float totalDistance = 0;
-	private int orbitFrameCount = 0;
+	private float orbitTime = 0.0F;
+	private float endAnimateTime = 0.0F;
+	private float startAnimateTime = 0.0F;
 	private bool gameOver = false;
-	private int endAnimateFrame = 0;
+	private bool gameStarted = false;
 
 	// Use this for initialization
 	void Start () {
@@ -49,17 +52,18 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameOver && endAnimateFrame <= END_ANIMATION_FRAME_COUNT) {
-			float diff = (SCREEN_WIDTH * 2 - scrollDistance) / (END_ANIMATION_FRAME_COUNT - endAnimateFrame + 1);
-			goBackground.transform.localPosition += new Vector3(-diff, 0, 0);
-			scrollDistance += diff;
-			UnityEngine.Object.FindObjectsOfType<Player>()
-							  .Cast<Behaviour>()
-							  .Concat(UnityEngine.Object.FindObjectsOfType<Item>().Cast<Behaviour>())
-							  .ToList()
-							  .ForEach(p => p.transform.localPosition += new Vector3(-diff, 0.0F, 0.0F));
-
-			endAnimateFrame++;
+		if (gameOver && endAnimateTime <= END_ANIMATION_INTERVAL) {
+			float diff = (SCREEN_WIDTH * 2 - scrollDistance) / (END_ANIMATION_INTERVAL - endAnimateTime + 1.0F / 60.0F) * Time.deltaTime;
+			scrollAll(diff);
+			endAnimateTime += Time.deltaTime;
+			return;
+		} else if (!gameStarted) {
+			scrollAll(-SCREEN_WIDTH);
+			gameStarted = true;
+		}
+		if (startAnimateTime <= START_ANIMATION_INTERVAL) {
+			scrollAll(SCREEN_WIDTH * System.Math.Min(Time.deltaTime, START_ANIMATION_INTERVAL - startAnimateTime));
+			startAnimateTime += Time.deltaTime;
 			return;
 		}
 
@@ -80,8 +84,8 @@ public class GameManager : MonoBehaviour {
 			addStage(stageChildTemplate);
         }
         
-		orbitFrameCount++;
-		if (orbitFrameCount >= ORBIT_DROP_FRAME_COUNT) {
+		orbitTime += Time.deltaTime;
+		if (orbitTime >= ORBIT_DROP_INTERVAL) {
 			UnityEngine.Object.FindObjectsOfType<Player>()
 							  .Select(p => (Vector2)p.gameObject.transform.localPosition)
 							  .ToList()
@@ -92,7 +96,7 @@ public class GameManager : MonoBehaviour {
 										 orbit.transform.localPosition = new Vector2(totalDistance, 0.0F) + p;
 										 orbit.transform.localScale = new Vector3(1f, 1f, 1f);
 							  		});
-			orbitFrameCount = 0;
+			orbitTime = 0.0F;
 		}
 
 		// score
@@ -133,6 +137,16 @@ public class GameManager : MonoBehaviour {
 	public void DamageStrong() {
 		Life -= 0.4f;
 		Debug.Log("Life: " + Life);
+	}
+
+	private void scrollAll(float value) {
+		goBackground.transform.localPosition += new Vector3(-value, 0, 0);
+		scrollDistance += value;
+		UnityEngine.Object.FindObjectsOfType<Player>()
+				   .Cast<Behaviour>()
+				   .Concat(UnityEngine.Object.FindObjectsOfType<Item>().Cast<Behaviour>())
+				   .ToList()
+				   .ForEach(p => p.transform.localPosition += new Vector3(-value, 0.0F, 0.0F));
 	}
 
 	private void addStage(GameObject template) {	
