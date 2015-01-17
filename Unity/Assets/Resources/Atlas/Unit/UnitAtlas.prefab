@@ -42,7 +42,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 511f880fb9ff6b049a1a2df074b6495e, type: 2}
   mSprites:
   - name: Item_ChangePosition
-    x: 868
+    x: 952
     y: 898
     width: 64
     height: 126
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_Damage
-    x: 933
-    y: 830
+    x: 64
+    y: 92
     width: 64
     height: 64
     borderLeft: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_LifeUp
-    x: 0
+    x: 129
     y: 92
     width: 64
     height: 64
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpecialColor
-    x: 933
-    y: 960
+    x: 64
+    y: 27
     width: 64
     height: 64
     borderLeft: 0
@@ -95,9 +95,9 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_SpecialColorFx01
     x: 0
-    y: 53
+    y: 31
     width: 32
-    height: 38
+    height: 50
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -107,10 +107,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpecialColorFx02
-    x: 0
-    y: 14
+    x: 868
+    y: 694
     width: 32
-    height: 38
+    height: 48
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpeedDown
-    x: 933
-    y: 895
+    x: 129
+    y: 27
     width: 64
     height: 64
     borderLeft: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_SpeedUp
     x: 868
-    y: 833
+    y: 743
     width: 64
     height: 64
     borderLeft: 0
@@ -267,6 +267,71 @@ MonoBehaviour:
     y: 591
     width: 216
     height: 216
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Horn02
+    x: 868
+    y: 891
+    width: 83
+    height: 133
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Horn03
+    x: 933
+    y: 768
+    width: 65
+    height: 39
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Horn04
+    x: 0
+    y: 82
+    width: 63
+    height: 74
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Horn05
+    x: 868
+    y: 813
+    width: 76
+    height: 77
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Horn06
+    x: 945
+    y: 821
+    width: 75
+    height: 69
     borderLeft: 0
     borderRight: 0
     borderTop: 0
