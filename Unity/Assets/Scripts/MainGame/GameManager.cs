@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
 	private ScrollManager scrollManager;
     
 	private const float SCREEN_WIDTH = 1136.0f;
+	private const int ORBIT_DROP_FRAME_COUNT = 30;
+	private const int END_ANIMATION_FRAME_COUNT = 60;
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";
 	private const string SCORE_PATH = "UI Root/Camera/Panel/GOD_GameMenu/GOD_Score/TXT_Score";
@@ -22,6 +24,8 @@ public class GameManager : MonoBehaviour {
 	private float scrollDistance = SCREEN_WIDTH;
 	private float totalDistance = 0;
 	private int orbitFrameCount = 0;
+	private bool gameOver = false;
+	private int endAnimateFrame = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +41,26 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (gameOver && endAnimateFrame <= END_ANIMATION_FRAME_COUNT) {
+			float diff = (SCREEN_WIDTH * 2 - scrollDistance) / (END_ANIMATION_FRAME_COUNT - endAnimateFrame + 1);
+			goBackground.transform.localPosition += new Vector3(-diff, 0, 0);
+			scrollDistance += diff;
+			UnityEngine.Object.FindObjectsOfType<Player>()
+							  .Cast<Behaviour>()
+							  .Concat(UnityEngine.Object.FindObjectsOfType<Item>().Cast<Behaviour>())
+							  .ToList()
+							  .ForEach(p => p.transform.localPosition += new Vector3(-diff, 0.0F, 0.0F));
+			
+			endAnimateFrame++;
+			return;
+		}
+
+		PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
+		if (pauseState.paused || gameOver) {
+			pauseState.Pause();
+			return;
+		}
+
 		//  scroll
 		float speed = scrollManager.scrollSpeed;
 		scrollDistance += speed;
@@ -52,7 +76,7 @@ public class GameManager : MonoBehaviour {
         }
         
 		orbitFrameCount++;
-		if (orbitFrameCount >= 30) {
+		if (orbitFrameCount >= ORBIT_DROP_FRAME_COUNT) {
 			UnityEngine.Object.FindObjectsOfType<Player>()
 							  .Select(p => (Vector2)p.gameObject.transform.localPosition)
 							  .ToList()
@@ -65,9 +89,6 @@ public class GameManager : MonoBehaviour {
 							  		});
 			orbitFrameCount = 0;
 		}
-        
-        PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
-		if (pauseState.paused) { return; }
 
 		// score
 		Score += Time.deltaTime;
@@ -79,6 +100,7 @@ public class GameManager : MonoBehaviour {
 		//  dead
 		if (Life < 0) {
 			pauseState.Pause();
+			gameOver = true;
 		}
 	}
 
