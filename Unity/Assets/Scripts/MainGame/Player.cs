@@ -2,13 +2,16 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
+	private GameManager gameManager;
 	private ScrollManager scrollManager;
 
 	private Vector3 speed = new Vector3(0, 2f, 0);
 
 	// Use this for initialization
 	void Start () {
-		scrollManager = GameObject.Find("GameScript").GetComponent<ScrollManager>();
+		GameObject gameScript = GameObject.Find("GameScript");
+		gameManager = gameScript.GetComponent<GameManager>();
+		scrollManager = gameScript.GetComponent<ScrollManager>();
 	}
 	
 	// Update is called once per frame
@@ -32,17 +35,19 @@ public class Player : MonoBehaviour {
 		{
 		case Item.ItemType.Damage:
 			message = "Damage";
+			gameManager.Damage();
 			break;
 		case Item.ItemType.LifeUp:
 			message = "LifeUp";
+			gameManager.LifeUp();
 			break;
 		case Item.ItemType.SpeedDown:
 			message = "SpeedDown";
-			ItemSpeedDown();
+			scrollManager.SpeedDown();
 			break;
 		case Item.ItemType.SpeedUp:
 			message = "SpeedUp";
-			ItemSpeedUp();
+			scrollManager.SpeedUp ();
             break;
 		case Item.ItemType.ChangePosition:
 			message = "ChangePosition";
@@ -50,22 +55,6 @@ public class Player : MonoBehaviour {
 			break;
         }
         Debug.Log(message + " " + this.gameObject.name + "←" + go.gameObject.name);
-	}
-
-	private void ItemDamage() {
-
-	}
-
-	private void ItemLifeUp() {
-
-	}
-
-	private void ItemSpeedDown() {
-		scrollManager.SpeedDown();
-	}
-
-	private void ItemSpeedUp() {
-		scrollManager.SpeedUp();
 	}
 
 	private void ItemChangePosition() {

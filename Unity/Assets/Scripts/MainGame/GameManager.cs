@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour {
     
 	private const float SCREEN_WIDTH = 1136;
 
-	public int Score { get; set; }
+	public int Score { get; private set; }
+	public float Life { get; private set; }
 	private float scrollDistance = SCREEN_WIDTH;
 
 	// Use this for initialization
@@ -17,10 +18,15 @@ public class GameManager : MonoBehaviour {
 		goAttach = GameObject.Find("UI Root/Camera/Panel/GOD_StageParent/GOD_Attach");
         
         scrollManager = GameObject.Find("GameScript").GetComponent<ScrollManager>();
+
+		this.Life = 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		// life
+		Life -= 0.01f * Time.deltaTime;
+
 		//  scroll
 		float speed = scrollManager.scrollSpeed;
 		scrollDistance += speed;
@@ -34,4 +40,14 @@ public class GameManager : MonoBehaviour {
             goAttach.GetComponent<UIGrid>().Reposition();
 		}
 	}
+
+	public void Damage() {
+		Life = Mathf.Min (1.0f, this.Life + 0.2f);
+		Debug.Log("Life: " + Life);
+    }
+
+	public void LifeUp() {
+		Life -= 0.2f;
+		Debug.Log("Life: " + Life);
+    }
 }

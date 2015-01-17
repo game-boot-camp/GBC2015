@@ -13,7 +13,7 @@ public class Item : MonoBehaviour {
 	public ItemType type;
 	
 	void Start() {
-		this.transform.localPosition = new Vector3(568, Random.Range(-320, 320), 0);
+		this.transform.localPosition = new Vector3(568, Random.Range(-200, 200), 0);
 		this.transform.localScale = new Vector3(1f, 1f, 1f);
 	}
 	
