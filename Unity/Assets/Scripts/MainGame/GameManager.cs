@@ -13,10 +13,13 @@ public class GameManager : MonoBehaviour {
 	private const float SCREEN_WIDTH = 1136.0f;
 	private const int ORBIT_DROP_FRAME_COUNT = 10;
 	private const int END_ANIMATION_FRAME_COUNT = 60;
+	private const string PANEL_PATH = "UI Root/Camera/Panel";
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";
 	private const string SCORE_PATH = "UI Root/Camera/Panel/GOD_GameMenu/GOD_Score/TXT_Score";
 	private const string STAGE_CHILD_PREFAB_PATH = "Prefabs/MainGame/Stage/GOD_02StageChild";
+	private const string STAGE_END_PREFAB_PATH = "Prefabs/MainGame/Stage/GOD_03StageEnd";
+	private const string RESULT_PREFAB_PATH = "Prefabs/MainGame/Result/GOD_Result";
 	private const string ORBIT_PREFAB_PATH = "Prefabs/MainGame/Chara/GOD_Orbit";
 
 	public float Score { get; private set; }
@@ -50,7 +53,7 @@ public class GameManager : MonoBehaviour {
 							  .Concat(UnityEngine.Object.FindObjectsOfType<Item>().Cast<Behaviour>())
 							  .ToList()
 							  .ForEach(p => p.transform.localPosition += new Vector3(-diff, 0.0F, 0.0F));
-			
+
 			endAnimateFrame++;
 			return;
 		}
@@ -69,10 +72,7 @@ public class GameManager : MonoBehaviour {
 		
 		if (scrollDistance >= SCREEN_WIDTH) {
 			scrollDistance -= SCREEN_WIDTH;
-			GameObject goStageChild = (GameObject)Instantiate(stageChildTemplate);
-			goStageChild.transform.parent = goAttach.transform;
-			goStageChild.transform.localScale = new Vector3(1f, 1f, 1f);
-            goAttach.GetComponent<UIGrid>().Reposition();
+			addStage(stageChildTemplate);
         }
         
 		orbitFrameCount++;
@@ -101,6 +101,12 @@ public class GameManager : MonoBehaviour {
 		if (Life < 0) {
 			pauseState.Pause();
 			gameOver = true;
+			addStage((GameObject)Resources.Load(STAGE_END_PREFAB_PATH));
+
+			GameObject result = (GameObject)Instantiate(Resources.Load(RESULT_PREFAB_PATH));
+			result.transform.parent = GameObject.Find(PANEL_PATH).transform;
+			result.transform.localScale = new Vector3(1f, 1f, 1f);
+			GameObject.FindGameObjectWithTag("Score").GetComponent<UILabel>().text = string.Format("{0:f3}メェ〜とる", Score);;
 		}
 	}
 
@@ -122,5 +128,12 @@ public class GameManager : MonoBehaviour {
 	public void DamageStrong() {
 		Life -= 0.4f;
 		Debug.Log("Life: " + Life);
+	}
+
+	private void addStage(GameObject template) {	
+		GameObject goStageChild = (GameObject)Instantiate(template);
+		goStageChild.transform.parent = goAttach.transform;
+		goStageChild.transform.localScale = new Vector3(1f, 1f, 1f);
+		goAttach.GetComponent<UIGrid>().Reposition();
 	}
 }
