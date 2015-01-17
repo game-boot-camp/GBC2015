@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
     
 	private const float SCREEN_WIDTH = 1136;
 
-	public int Score { get; private set; }
+	public float Score { get; private set; }
 	public float Life { get; private set; }
 	private float scrollDistance = SCREEN_WIDTH;
 
@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// score
+		Score += Time.deltaTime;
+		GameObject.Find("UI Root/Camera/Panel/GOD_GameMenu/GOD_Score/TXT_Score").GetComponent<UILabel>().text = string.Format("{0:f3}m", Score);
+
 		// life
 		Life -= 0.01f * Time.deltaTime;
 
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Damage() {
-		Life = Mathf.Min (1.0f, this.Life + 0.2f);
+		Life = Mathf.Min(1.0f, this.Life + 0.2f);
 		Debug.Log("Life: " + Life);
     }
 
