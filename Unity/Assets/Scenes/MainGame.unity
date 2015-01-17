@@ -251,7 +251,7 @@ Transform:
   m_PrefabInternal: {fileID: 397851075}
   m_GameObject: {fileID: 153472218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 40, z: 0}
+  m_LocalPosition: {x: 0, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 640655205}
@@ -1055,6 +1055,18 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1448067153}
+    - target: {fileID: 494496, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 414176, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 494490, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
   m_RootGameObject: {fileID: 1506717496}
@@ -2598,7 +2610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrangement: 0
   maxPerLine: 0
-  cellWidth: 1135
+  cellWidth: 1130
   cellHeight: 0
   animateSmoothly: 0
   sorted: 1
@@ -3650,7 +3662,7 @@ Transform:
   m_PrefabInternal: {fileID: 397851075}
   m_GameObject: {fileID: 1657933747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -455, y: 0, z: 0}
+  m_LocalPosition: {x: -455, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 633212987}
@@ -3696,6 +3708,14 @@ Prefab:
     - target: {fileID: 491596, guid: 27bc67c9d71727742bad2570399f2747, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 160732, guid: 27bc67c9d71727742bad2570399f2747, type: 2}
+      propertyPath: m_Name
+      value: _GOD_StageStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483036, guid: 27bc67c9d71727742bad2570399f2747, type: 2}
+      propertyPath: cellWidth
+      value: 1130
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 27bc67c9d71727742bad2570399f2747, type: 2}
@@ -4419,7 +4439,7 @@ Transform:
   m_PrefabInternal: {fileID: 397851075}
   m_GameObject: {fileID: 1973906309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 430, y: -35, z: 0}
+  m_LocalPosition: {x: 430, y: -25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1741032364}
@@ -4872,7 +4892,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2122880156}
   m_Layer: 5
-  m_Name: GOD_StageStart
+  m_Name: _GOD_StageStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
