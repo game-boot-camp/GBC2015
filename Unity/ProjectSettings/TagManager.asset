@@ -4,6 +4,7 @@
 TagManager:
   tags:
   - DamageObject
+  - ColorChangeObject
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
