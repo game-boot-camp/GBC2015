@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		if (Global.playerCount == 1) {
 			GameObject.Find ("UI Root/Camera/Panel/GOD_Player02").SetActive(false);
+			GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>().target = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>().target;
 		}
 
 		goBackground = GameObject.Find(STAGE_PARENT_PATH);
