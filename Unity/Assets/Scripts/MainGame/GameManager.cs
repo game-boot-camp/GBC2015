@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
 	private ScrollManager scrollManager;
     
 	private const float SCREEN_WIDTH = 1136.0f;
-	private const int ORBIT_DROP_FRAME_COUNT = 30;
+	private const int ORBIT_DROP_FRAME_COUNT = 10;
 	private const int END_ANIMATION_FRAME_COUNT = 60;
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 	private const float HIGH_SPEED = 500.0f;
 
 	private int direction = 1;
-	private float speed = 200.0f;
+	private float speed = NORMAL_SPEED;
 
 	private float highSpeedTimeRest = 0.0f;
 
@@ -42,9 +42,9 @@ public class Player : MonoBehaviour {
     }
 
 	private void ChangeDirectionIfNeeded() {
-		if (this.transform.localPosition.y >= 200) {
+		if (this.transform.localPosition.y >= 170) {
 			direction = -1;
-		} else if (this.transform.localPosition.y <= -200) {
+		} else if (this.transform.localPosition.y <= -270) {
 			direction = 1;
         }
     }
