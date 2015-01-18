@@ -32,20 +32,9 @@ public class Player : MonoBehaviour {
 			color = Color.white;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if ((time += Time.deltaTime) <= 2.5f) { return; } // XXX:
-
-		ChangeDirectionIfNeeded();
-
-		if (highSpeedTimeRest > 0.0f) {
-			highSpeedTimeRest -= Time.deltaTime;
-			if (highSpeedTimeRest < 0.0f) {
-				highSpeedTimeRest = 0;
-				speed = NORMAL_SPEED;
-			}
-		}
 		if (body != null) {
 			body.Select(b => b.GetComponent<UISprite>()).ToList().ForEach(s => s.color = color);
 			UISprite bodySprite = body.Where(b => b.name.EndsWith("Body")).First().GetComponent<UISprite>();
@@ -56,6 +45,17 @@ public class Player : MonoBehaviour {
 			} else {
 				bodySprite.enabled = false;
 				faceSprite.spriteName = "Sheep_Face02";
+			}
+		}
+		if ((time += Time.deltaTime) <= 2.5f) { return; } // XXX:
+
+		ChangeDirectionIfNeeded();
+
+		if (highSpeedTimeRest > 0.0f) {
+			highSpeedTimeRest -= Time.deltaTime;
+			if (highSpeedTimeRest < 0.0f) {
+				highSpeedTimeRest = 0;
+				speed = NORMAL_SPEED;
 			}
 		}
 
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
 			direction = 1;
         }
     }
-    
+
     //　物体の衝突時の処理
 	void OnTriggerEnter2D(Collider2D go) {
 		Item item = (Item)go.gameObject.GetComponent(typeof(Item));
@@ -148,11 +148,11 @@ public class Player : MonoBehaviour {
 	private void ChangePlayer() {
 		UIButtonMessage button1 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>();
 		UIButtonMessage button2 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>();
-		
+
 		GameObject tmp = button1.target;
 		button1.target = button2.target;
         button2.target = tmp;
-                
+
 		Player player1 = null;
 		Player player2 = null;
 		foreach (Player player in GameObject.FindObjectsOfType(typeof(Player))) {

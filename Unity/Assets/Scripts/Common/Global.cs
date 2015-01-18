@@ -26,6 +26,18 @@ public class Global {
 		public GameObject CreatePlayer() {
 			var resource = Resources.Load(CHARA_PREFAB_PATH + (CharacterType + 1).ToString("d2"));
 			GameObject obj = (GameObject)Object.Instantiate(resource);
+			Player player = obj.GetComponent<Player>();
+			switch(color) {
+			case CharacterColor.Color1:
+				player.color = Color.red;
+				break;
+			case CharacterColor.Color2:
+				player.color = Color.green;
+				break;
+			case CharacterColor.Color3:
+				player.color = Color.blue;
+				break;
+			}
 			return obj;
 		}
 	}
