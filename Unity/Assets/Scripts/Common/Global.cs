@@ -29,13 +29,13 @@ public class Global {
 			Player player = obj.GetComponent<Player>();
 			switch(color) {
 			case CharacterColor.Color1:
-				player.color = Color.red;
+				player.color = Color.white;
 				break;
 			case CharacterColor.Color2:
-				player.color = Color.green;
+				player.color = new Color(240f/255, 141f/255, 213f/255);;
 				break;
 			case CharacterColor.Color3:
-				player.color = Color.blue;
+				player.color = new Color(97f/255, 232f/255, 244f/255);
 				break;
 			}
 			return obj;

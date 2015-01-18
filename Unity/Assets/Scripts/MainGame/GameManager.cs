@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		// score
-		Score += Time.deltaTime;
+		Score += Time.deltaTime * GameObject.Find("GameScript").GetComponent<ScrollManager>().scrollSpeed / 150;
 		GameObject.Find(SCORE_PATH).GetComponent<UILabel>().text = string.Format("{0:f3}", Score);
 
 		// life
@@ -139,12 +139,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void LifeUp() {
-		Life = Mathf.Min(1.0f, this.Life + 0.15f);
+		Life = Mathf.Min(1.0f, this.Life + 0.1f);
 		Debug.Log("Life: " + Life);
     }
 
 	public void LifeUpStrong() {
-		Life = Mathf.Min(1.0f, this.Life + 0.4f);
+		Life = Mathf.Min(1.0f, this.Life + 0.3f);
 		Debug.Log("Life: " + Life);
 	}
 

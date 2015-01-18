@@ -7,7 +7,7 @@ public class CreateDamageObject : MonoBehaviour {
 	private GameObject goParent;
 	private const string GO_PARENT = "UI Root/Camera/Panel";
 
-	private float intervalTimeThreshold = 8.0f;
+	private float intervalTimeThreshold = 12.0f;
 	private float intervalTime;
 
 	// Use this for initialization
@@ -28,7 +28,7 @@ public class CreateDamageObject : MonoBehaviour {
 
 			intervalTime = 0.0f;
 			if (intervalTimeThreshold > 5f) {
-				intervalTimeThreshold -= 0.101f;
+				intervalTimeThreshold -= 0.301f;
 			}
 		}
 

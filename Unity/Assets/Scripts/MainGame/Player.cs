@@ -28,18 +28,11 @@ public class Player : MonoBehaviour {
 		gameManager = gameScript.GetComponent<GameManager>();
 		scrollManager = gameScript.GetComponent<ScrollManager>();
 		body = gameObject.FindInChildrenWithTag("ColorChangeObject");
-		if (color == new Color()) {
-			color = Color.white;
-		}
-	}
-
-	// Update is called once per frame
-	void Update () {
 		if (body != null) {
 			body.Select(b => b.GetComponent<UISprite>()).ToList().ForEach(s => s.color = color);
 			UISprite bodySprite = body.Where(b => b.name.EndsWith("Body")).First().GetComponent<UISprite>();
 			UISprite faceSprite = this.GetComponentsInChildren<UISprite>().Where(b => b.name.EndsWith("Face")).First().GetComponent<UISprite>();
-            if (gameManager.Life > 0.0) {
+			if (gameManager.Life > 0.0) {
 				bodySprite.spriteName = SPRITE_NAME + (5 - (int)System.Math.Ceiling(gameManager.Life / 0.25)).ToString("d2");
 				faceSprite.spriteName = (gameManager.Life > 0.25) ? "Sheep_Face01" : "Sheep_Face02";
 			} else {
@@ -47,6 +40,30 @@ public class Player : MonoBehaviour {
 				faceSprite.spriteName = "Sheep_Face02";
 			}
 		}
+
+		SetSprite();
+		if (color == new Color()) {
+			color = Color.white;
+		}
+	}
+
+	private void SetSprite() {
+		if (body != null) {
+			body.Select(b => b.GetComponent<UISprite>()).ToList().ForEach(s => s.color = color);
+			UISprite bodySprite = body.Where(b => b.name.EndsWith("Body")).First().GetComponent<UISprite>();
+			UISprite faceSprite = this.GetComponentsInChildren<UISprite>().Where(b => b.name.EndsWith("Face")).First().GetComponent<UISprite>();
+			if (gameManager.Life > 0.0) {
+				bodySprite.spriteName = SPRITE_NAME + (5 - (int)System.Math.Ceiling(gameManager.Life / 0.25)).ToString("d2");
+				faceSprite.spriteName = (gameManager.Life > 0.25) ? "Sheep_Face01" : "Sheep_Face02";
+			} else {
+				bodySprite.enabled = false;
+				faceSprite.spriteName = "Sheep_Face02";
+			}
+		}
+	}
+
+	// Update is called once per frame
+	void Update () {
 		if ((time += Time.deltaTime) <= 2.5f) { return; } // XXX:
 
 		ChangeDirectionIfNeeded();
@@ -58,6 +75,7 @@ public class Player : MonoBehaviour {
 				speed = NORMAL_SPEED;
 			}
 		}
+		SetSprite();
 
 		this.transform.localPosition += new Vector3(0, speed * direction * Time.deltaTime, 0);
     }
@@ -75,7 +93,7 @@ public class Player : MonoBehaviour {
 			direction = 1;
         }
     }
-
+    
     //　物体の衝突時の処理
 	void OnTriggerEnter2D(Collider2D go) {
 		Item item = (Item)go.gameObject.GetComponent(typeof(Item));
@@ -148,11 +166,11 @@ public class Player : MonoBehaviour {
 	private void ChangePlayer() {
 		UIButtonMessage button1 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>();
 		UIButtonMessage button2 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>();
-
+		
 		GameObject tmp = button1.target;
 		button1.target = button2.target;
         button2.target = tmp;
-
+                
 		Player player1 = null;
 		Player player2 = null;
 		foreach (Player player in GameObject.FindObjectsOfType(typeof(Player))) {
@@ -168,6 +186,10 @@ public class Player : MonoBehaviour {
 			float tmpSpeed = player1.speed;
 			player1.speed = player2.speed;
 			player2.speed = tmpSpeed;
+
+			float tmpHighSpeedTimeRest = player1.highSpeedTimeRest;
+			player1.highSpeedTimeRest = player2.highSpeedTimeRest;
+			player2.highSpeedTimeRest = tmpHighSpeedTimeRest;
 		}
     }
 }
