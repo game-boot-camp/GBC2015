@@ -16,6 +16,9 @@ public class Player : MonoBehaviour {
 
 	public Color color { get; set; }
 
+
+	private float time = 0.0f;
+
 	// Use this for initialization
 	void Start () {
 		GameObject gameScript = GameObject.Find("GameScript");
@@ -27,7 +30,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time <= 2.5f) { return; } // XXX:
+		if ((time += Time.deltaTime) <= 2.5f) { return; } // XXX:
 
 		ChangeDirectionIfNeeded();
 

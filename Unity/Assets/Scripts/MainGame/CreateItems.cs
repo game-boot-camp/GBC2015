@@ -47,7 +47,7 @@ public class CreateItems : MonoBehaviour {
 		if (intervalTime >= 2.0f) {
 			int rand = Random.Range(0, incident_sum);
 			int sum = 0;
-			int[] incidence = this.incidence[Global.playerCount];
+			int[] incidence = this.incidence[Global.playerCount== 2 ? 1 : 0];
 			for (int i=0; i<=incidence.Length; i++) {
 				sum += incidence[i];
 				if (sum >= rand) {
