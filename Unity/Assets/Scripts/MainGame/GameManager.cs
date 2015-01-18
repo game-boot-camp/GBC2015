@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find(SCORE_PATH).GetComponent<UILabel>().text = string.Format("{0:f3}", Score);
 
 		// life
-		Life -= 0.02f * Time.deltaTime;
+		Life -= 0.015f * Time.deltaTime;
 
 		//  dead
 		if (Life < 0) {
@@ -124,22 +124,22 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void LifeUp() {
-		Life = Mathf.Min(1.0f, this.Life + 0.1f);
+		Life = Mathf.Min(1.0f, this.Life + 0.15f);
 		Debug.Log("Life: " + Life);
     }
 
 	public void LifeUpStrong() {
-		Life = Mathf.Min(1.0f, this.Life + 0.3f);
+		Life = Mathf.Min(1.0f, this.Life + 0.4f);
 		Debug.Log("Life: " + Life);
 	}
 
 	public void Damage() {
-		Life -= 0.2f;
+		Life -= 0.1f;
 		Debug.Log("Life: " + Life);
     }
 
 	public void DamageStrong() {
-		Life -= 0.4f;
+		Life -= 0.3f;
 		Debug.Log("Life: " + Life);
 	}
 
