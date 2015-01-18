@@ -330,17 +330,17 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
-  mWidth: 336
+  mWidth: 630
   mHeight: 116
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.89655161
+  aspectRatio: 5.43103456
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
-  mText: "\u306A\u3093\u304B\u30E1\u30C3\u30BB\u30FC\u30B8\n\u306A\u3093\u304B\u30E1\u30C3\u30BB\u30FC\u30B8"
+  mText: "\uFF22\uFF2F\uFF2F\uFF34\uFF23\uFF21\uFF2D\uFF30\u3055\u3044\u3053\u3046\u3060\u305C\uFF01\n\u3093\u3067\u3001\u4ECA\u65E5\u306F\u4F55\u3059\u308B\u306E\uFF1F"
   mFontSize: 42
   mFontStyle: 0
   mEncoding: 1
@@ -1331,6 +1331,18 @@ Prefab:
     - target: {fileID: 407150, guid: 4e6ce9f30494f9d40a27af10c9529c4d, type: 2}
       propertyPath: m_LocalPosition.y
       value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407180, guid: 4e6ce9f30494f9d40a27af10c9529c4d, type: 2}
+      propertyPath: aspectRatio
+      value: 5.43103456
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407180, guid: 4e6ce9f30494f9d40a27af10c9529c4d, type: 2}
+      propertyPath: mWidth
+      value: 630
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407180, guid: 4e6ce9f30494f9d40a27af10c9529c4d, type: 2}
+      propertyPath: mText
+      value: "\uFF22\uFF2F\uFF2F\uFF34\uFF23\uFF21\uFF2D\uFF30\u3055\u3044\u3053\u3046\u3060\u305C\uFF01\n\u3093\u3067\u3001\u4ECA\u65E5\u306F\u4F55\u3059\u308B\u306E\uFF1F"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e6ce9f30494f9d40a27af10c9529c4d, type: 2}
