@@ -10,7 +10,6 @@ public class CreateItems : MonoBehaviour {
 	private float intervalTime;
 
 	private readonly string[] GO_ITEM_PATHS = new[] {
-		"Prefabs/MainGame/Item/GOD_ItemDamage",
 		"Prefabs/MainGame/Item/GOD_ItemDamageStrong",
         "Prefabs/MainGame/Item/GOD_ItemLifeUp",
 		"Prefabs/MainGame/Item/GOD_ItemLifeUpStrong",
@@ -27,8 +26,8 @@ public class CreateItems : MonoBehaviour {
     private const string GO_PARENT = "UI Root/Camera/Panel";
 
 	CreateItems () {
-		incidence[0] = new int[]{ 30, 5, 50, 10, 20, 15, 10, 0, 10, 5 };
-		incidence[1] = new int[]{ 30, 5, 50, 10, 20, 15, 10, 30, 10, 5 };
+		incidence[0] = new int[]{ 5, 50, 10, 20, 15, 10, 0, 10, 5 };
+		incidence[1] = new int[]{ 5, 50, 10, 20, 15, 10, 30, 10, 5 };
 	}
 
 	// Use this for initialization

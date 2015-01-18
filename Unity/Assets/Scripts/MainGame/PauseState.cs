@@ -93,8 +93,9 @@ public class PauseState : MonoBehaviour {
 		var behaviour = UnityEngine.Object.FindObjectsOfType<Player>().Where(b => b.enabled).Select<Player, IPausable>(b => new PausableBehaviour(b));
 		var items = UnityEngine.Object.FindObjectsOfType<Item>().Where(b => b.enabled).Select<Item, IPausable>(b => new PausableBehaviour(b));
 		var gameSystem = new PausableBehaviour(UnityEngine.Object.FindObjectOfType<CreateItems>());
+		var damageObjSystem = new PausableBehaviour(UnityEngine.Object.FindObjectOfType<CreateDamageObject>());
 
-		pauseObjects = behaviour.Concat(items).Concat(new [] { gameSystem }).ToList();
+		pauseObjects = behaviour.Concat(items).Concat(new [] { gameSystem, damageObjSystem }).ToList();
 		pauseObjects.ForEach(p => p.Pause());
 		paused = true;
 	}
