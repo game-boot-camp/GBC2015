@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	private const float SCREEN_WIDTH = 1136.0f;
 	private const float ORBIT_DROP_INTERVAL = 10.0F / 60.0F;
 	private const float END_ANIMATION_INTERVAL = 1.0F;
-	private const float START_ANIMATION_INTERVAL = 1.0F;
+	private const float START_ANIMATION_INTERVAL = 2.5F;
 	private const string PANEL_PATH = "UI Root/Camera/Panel";
 	private const string STAGE_PARENT_PATH = "UI Root/Camera/Panel/GOD_StageParent";
 	private const string ATTACH_PATH = "UI Root/Camera/Panel/GOD_StageParent/GOD_Attach";
@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
+
 		if (gameOver && endAnimateTime <= END_ANIMATION_INTERVAL) {
 			float diff = (SCREEN_WIDTH * 2 - scrollDistance) / (END_ANIMATION_INTERVAL - endAnimateTime + 1.0F / 60.0F) * Time.deltaTime;
 			scrollAll(diff);
@@ -60,14 +62,13 @@ public class GameManager : MonoBehaviour {
 		} else if (!gameStarted) {
 			scrollAll(-SCREEN_WIDTH);
 			gameStarted = true;
-		}
+        }
 		if (startAnimateTime <= START_ANIMATION_INTERVAL) {
-			scrollAll(SCREEN_WIDTH * System.Math.Min(Time.deltaTime, START_ANIMATION_INTERVAL - startAnimateTime));
+			scrollAll(SCREEN_WIDTH * System.Math.Min(Time.deltaTime, START_ANIMATION_INTERVAL - startAnimateTime) / START_ANIMATION_INTERVAL);
 			startAnimateTime += Time.deltaTime;
 			return;
 		}
 
-		PauseState pauseState = GameObject.Find("Pause").GetComponent<PauseState>();
 		if (pauseState.paused || gameOver) {
 			pauseState.Pause();
 			return;

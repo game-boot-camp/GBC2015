@@ -27,6 +27,8 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Time.time <= 2.5f) { return; } // XXX:
+
 		ChangeDirectionIfNeeded();
 
 		if (highSpeedTimeRest > 0.0f) {
