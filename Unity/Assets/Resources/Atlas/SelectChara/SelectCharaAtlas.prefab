@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: SelectChara_Back
     x: 0
-    y: 410
+    y: 1434
     width: 1024
     height: 614
     borderLeft: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_BTNArrow0
-    x: 531
-    y: 5
+    x: 1351
+    y: 1561
     width: 92
     height: 184
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_BTNArrow01
-    x: 624
-    y: 51
+    x: 1444
+    y: 1607
     width: 86
     height: 138
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_BTNBack
-    x: 0
-    y: 25
+    x: 1501
+    y: 1206
     width: 529
     height: 113
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_BTNColorSelect
-    x: 711
-    y: 112
+    x: 1351
+    y: 1483
     width: 90
     height: 77
     borderLeft: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_BTNStart
-    x: 0
-    y: 139
+    x: 1501
+    y: 1320
     width: 530
     height: 113
     borderLeft: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: SelectChara_CharaBack01
     x: 1025
-    y: 720
+    y: 1744
     width: 325
     height: 304
     borderLeft: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_CharaBack02
-    x: 1351
-    y: 721
+    x: 1025
+    y: 1440
     width: 325
     height: 303
     borderLeft: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_CharaBackMulti
-    x: 1677
-    y: 722
+    x: 1351
+    y: 1746
     width: 326
     height: 302
     borderLeft: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: SelectChara_Deco
-    x: 531
-    y: 190
+    x: 0
+    y: 1141
     width: 389
     height: 62
     borderLeft: 0
@@ -173,9 +173,9 @@ MonoBehaviour:
     paddingBottom: 0
   - name: SelectChara_Top
     x: 0
-    y: 253
-    width: 1024
-    height: 156
+    y: 1204
+    width: 1500
+    height: 229
     borderLeft: 0
     borderRight: 0
     borderTop: 0
