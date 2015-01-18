@@ -21,12 +21,24 @@ public class CreateItems : MonoBehaviour {
 		"Prefabs/MainGame/Item/GOD_ItemSpecialColor",
 		"Prefabs/MainGame/Item/GOD_ItemSpecialShape",
     };
+	private int[][] incidence = new int[2][];
+	private int incident_sum = 0;
+
     private const string GO_PARENT = "UI Root/Camera/Panel";
+
+	CreateItems () {
+		incidence[0] = new int[]{ 30, 5, 50, 10, 20, 15, 10, 0, 10, 5 };
+		incidence[1] = new int[]{ 30, 5, 50, 10, 20, 15, 10, 30, 10, 5 };
+	}
 
 	// Use this for initialization
 	void Start () {
 		goItems = GO_ITEM_PATHS.Select(p => Resources.Load(p)).Cast<GameObject>().ToArray();
 		goParent = GameObject.Find (GO_PARENT);
+
+		foreach (int incident in incidence[Global.playerCount== 2 ? 1 : 0]) {
+			incident_sum += incident;
+		}
 	}
 	
 	// Update is called once per frame
@@ -34,8 +46,17 @@ public class CreateItems : MonoBehaviour {
 		intervalTime += Time.deltaTime;
 
 		if (intervalTime >= 2.0f) {
-			goCreated = (GameObject)Instantiate(goItems[Random.Range(0, goItems.Length)]);
-			goCreated.transform.parent = goParent.transform;
+			int rand = Random.Range(0, incident_sum);
+			int sum = 0;
+			int[] incidence = this.incidence[Global.playerCount];
+			for (int i=0; i<=incidence.Length; i++) {
+				sum += incidence[i];
+				if (sum >= rand) {
+					goCreated = (GameObject)Instantiate(goItems[i]);
+					goCreated.transform.parent = goParent.transform;
+					break;
+				}
+			}
 
 			intervalTime = 0.0f;
 		}
