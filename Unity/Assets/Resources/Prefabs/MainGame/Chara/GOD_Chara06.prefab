@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11417922}
   m_Layer: 5
   m_Name: SPR_BodyInner
-  m_TagString: ColorChangeObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,6 +27,7 @@ GameObject:
   - 61: {fileID: 6139894}
   - 50: {fileID: 5039894}
   - 114: {fileID: 11439894}
+  - 111: {fileID: 11182378}
   m_Layer: 5
   m_Name: GOD_Chara06
   m_TagString: Untagged
@@ -258,6 +259,21 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 96, y: 96}
   m_Center: {x: 0, y: 0}
+--- !u!111 &11182378
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139882}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7ed20669e8cdc1a4894eba399be2768f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7ed20669e8cdc1a4894eba399be2768f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11417922
 MonoBehaviour:
   m_ObjectHideFlags: 1
