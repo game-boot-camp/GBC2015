@@ -139,12 +139,32 @@ public class Player : MonoBehaviour {
 			rotation.duration = 0.2f;
 			rotation.delay = 0.2f;
 		}
+		Invoke ("ChangePlayer", 0.2f);
+    }
 
+	private void ChangePlayer() {
 		UIButtonMessage button1 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>();
 		UIButtonMessage button2 = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>();
-
+		
 		GameObject tmp = button1.target;
 		button1.target = button2.target;
-		button2.target = tmp;
-	}
+        button2.target = tmp;
+                
+		Player player1 = null;
+		Player player2 = null;
+		foreach (Player player in GameObject.FindObjectsOfType(typeof(Player))) {
+			if (player1 == null) { player1 = player; continue; }
+			player2 = player;
+		}
+
+		if (player2 != null) {
+			Color tmpColor = player1.color;
+			player1.color = player2.color;
+			player2.color = tmpColor;
+
+			float tmpSpeed = player1.speed;
+			player1.speed = player2.speed;
+			player2.speed = tmpSpeed;
+		}
+    }
 }
