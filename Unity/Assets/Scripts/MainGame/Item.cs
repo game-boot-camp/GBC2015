@@ -19,7 +19,7 @@ public class Item : MonoBehaviour {
 	
 	void Start() {
 		this.transform.localPosition = new Vector3(568, Random.Range(-200, 200), 0);
-		this.transform.localScale = new Vector3(1f, 1f, 1f);
+		this.transform.localScale = new Vector3(Mathf.Sign(transform.localScale.x), 1f, 1f);
 	}
 	
 	void Update() {
