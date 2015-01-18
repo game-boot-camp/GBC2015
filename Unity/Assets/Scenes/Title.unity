@@ -185,6 +185,7 @@ GameObject:
   - 114: {fileID: 215428642}
   - 114: {fileID: 215428641}
   - 114: {fileID: 215428640}
+  - 111: {fileID: 215428644}
   m_Layer: 5
   m_Name: BTN_Start
   m_TagString: Untagged
@@ -266,6 +267,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1136, y: 640, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &215428644
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215428638}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &362008517
 GameObject:
   m_ObjectHideFlags: 0

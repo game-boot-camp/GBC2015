@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &183590
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483590}
+  - 114: {fileID: 11483590}
+  m_Layer: 5
+  m_Name: SPR_BodyInner
+  m_TagString: ColorChangeObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &186970
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +129,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &483590
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 486976}
+  m_RootOrder: 0
 --- !u!4 &486970
 Transform:
   m_ObjectHideFlags: 1
@@ -137,7 +165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486976}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &486974
 Transform:
   m_ObjectHideFlags: 1
@@ -149,7 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486976}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &486976
 Transform:
   m_ObjectHideFlags: 1
@@ -160,6 +188,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -.600000024, y: .600000024, z: 1}
   m_Children:
+  - {fileID: 483590}
   - {fileID: 486974}
   - {fileID: 486978}
   - {fileID: 486980}
@@ -178,7 +207,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486976}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &486980
 Transform:
   m_ObjectHideFlags: 1
@@ -190,7 +219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486976}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &486982
 Transform:
   m_ObjectHideFlags: 1
@@ -202,7 +231,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486976}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!50 &5086982
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -229,6 +258,54 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 96, y: 96}
   m_Center: {x: 0, y: 0}
+--- !u!114 &11483590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 216
+  mHeight: 216
+  mDepth: 19
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 1
+  mAtlas: {fileID: 11458104, guid: 4ab99e025246df84c901925f0c491e6a, type: 2}
+  mSpriteName: Sheep_BodyInner
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFillCenter: 1
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
 --- !u!114 &11486972
 MonoBehaviour:
   m_ObjectHideFlags: 1
