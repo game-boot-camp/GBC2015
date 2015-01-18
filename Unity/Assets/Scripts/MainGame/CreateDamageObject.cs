@@ -9,7 +9,6 @@ public class CreateDamageObject : MonoBehaviour {
 
 	private float intervalTimeThreshold = 8.0f;
 	private float intervalTime;
-	private float difficulty = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -21,21 +20,15 @@ public class CreateDamageObject : MonoBehaviour {
 		intervalTime += Time.deltaTime;
 		
 		if (intervalTime >= intervalTimeThreshold) {
-			int index = Random.Range(0, (int)(10-difficulty));
-			for (int i=index; i<index+difficulty; i++) {
-                GameObject goCreated = (GameObject)Instantiate(goDamage);
-				goCreated.transform.parent = goParent.transform;
-				goCreated.transform.localScale = new Vector3(1f, 1f, 1f);
-                goCreated.transform.localPosition = new Vector3(568, -236 + i * 40, 0);
-            }
+			int index = Random.Range(0, 10);
+	        GameObject goCreated = (GameObject)Instantiate(goDamage);
+			goCreated.transform.parent = goParent.transform;
+			goCreated.transform.localScale = new Vector3(1f, 1f, 1f);
+    	    goCreated.transform.localPosition = new Vector3(568, -236 + index * 40, 0);
 
 			intervalTime = 0.0f;
-			if (intervalTimeThreshold > 6f) {
+			if (intervalTimeThreshold > 5f) {
 				intervalTimeThreshold -= 0.101f;
-			}
-
-			if (difficulty < 5) {
-				difficulty += 0.2f;
 			}
 		}
 
