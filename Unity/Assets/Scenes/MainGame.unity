@@ -2039,7 +2039,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.41666651
+  aspectRatio: 3.5
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -2137,6 +2137,19 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1448067153}
+    - target: {fileID: 11494492, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: mWidth
+      value: 212
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494492, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: mTrueTypeFont
+      value: 
+      objectReference: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52,
+        type: 3}
+    - target: {fileID: 11494492, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
+      propertyPath: aspectRatio
+      value: 3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a509dd8e1779f24e8b623ac8b7ca7a9, type: 2}
   m_RootGameObject: {fileID: 1506717496}

@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 372232337}
   m_Layer: 5
-  m_Name: GOD_SelectCharaSingle
+  m_Name: GOD_SelectChara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 499967811}
   m_Layer: 5
-  m_Name: GOD_Select
+  m_Name: GOD_SelectPlayer01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -834,6 +834,14 @@ Prefab:
     - target: {fileID: 11453708, guid: 32dd54361f8167c4483c75f23ad3469d, type: 2}
       propertyPath: aspectRatio
       value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 153670, guid: 32dd54361f8167c4483c75f23ad3469d, type: 2}
+      propertyPath: m_Name
+      value: GOD_SelectPlayer01
+      objectReference: {fileID: 0}
+    - target: {fileID: 153664, guid: 32dd54361f8167c4483c75f23ad3469d, type: 2}
+      propertyPath: m_Name
+      value: GOD_SelectChara
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32dd54361f8167c4483c75f23ad3469d, type: 2}
