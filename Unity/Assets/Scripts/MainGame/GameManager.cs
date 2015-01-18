@@ -134,6 +134,10 @@ public class GameManager : MonoBehaviour {
 			GameObject result = (GameObject)Instantiate(Resources.Load(RESULT_PREFAB_PATH));
 			result.transform.parent = panel.transform;
 			result.transform.localScale = new Vector3(1f, 1f, 1f);
+			GameObject damaged = Global.playerData[0].CreateDamagedSheep();
+			damaged.transform.parent = result.FindByName("GOD_All").FindByName("GOD_Attach").transform;
+			damaged.transform.localScale = new Vector3(1, 1, 1);
+			damaged.transform.localPosition = new Vector3(0, 50, 0);
 			GameObject.FindGameObjectWithTag("Score").GetComponent<UILabel>().text = string.Format("{0:f3}メェ〜とる", Score);;
 		}
 	}

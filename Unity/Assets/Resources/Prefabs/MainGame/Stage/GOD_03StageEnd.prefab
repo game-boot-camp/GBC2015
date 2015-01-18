@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 406090}
   m_Layer: 5
   m_Name: GOD_03StageEnd
-  m_TagString: Untagged
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

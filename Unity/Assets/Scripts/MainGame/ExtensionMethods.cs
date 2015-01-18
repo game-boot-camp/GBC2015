@@ -17,4 +17,11 @@ public static class ExtensionMethods {
 						 .Select(t => t.gameObject)
 						 .ToArray();
 	}
+
+	public static GameObject FindByName(this GameObject gameObject, string name) {
+		return gameObject.GetComponentsInChildren<Transform>(true)
+						.Where(t => t.gameObject.name == name)
+				.Select(t => t.gameObject)
+				.FirstOrDefault();
+	}
 }
