@@ -26,8 +26,8 @@ public class CreateItems : MonoBehaviour {
     private const string GO_PARENT = "UI Root/Camera/Panel";
 
 	CreateItems () {
-		incidence[0] = new int[]{ 5, 50, 10, 20, 15, 10, 0, 10, 5 };
-		incidence[1] = new int[]{ 5, 50, 10, 20, 15, 10, 30, 10, 5 };
+		incidence[0] = new int[]{ 5, 50, 10, 20, 15, 10, 0, 10, 0 };
+		incidence[1] = new int[]{ 5, 50, 10, 20, 15, 10, 30, 20, 0 };
 	}
 
 	// Use this for initialization
@@ -35,7 +35,7 @@ public class CreateItems : MonoBehaviour {
 		goItems = GO_ITEM_PATHS.Select(p => Resources.Load(p)).Cast<GameObject>().ToArray();
 		goParent = GameObject.Find (GO_PARENT);
 
-		foreach (int incident in incidence[Global.playerCount== 2 ? 1 : 0]) {
+		foreach (int incident in incidence[Global.playerCount==1 ? 0 : 1]) {
 			incident_sum += incident;
 		}
 	}
@@ -47,7 +47,7 @@ public class CreateItems : MonoBehaviour {
 		if (intervalTime >= 2.0f) {
 			int rand = Random.Range(0, incident_sum);
 			int sum = 0;
-			int[] incidence = this.incidence[Global.playerCount== 2 ? 1 : 0];
+			int[] incidence = this.incidence[Global.playerCount== 1 ? 0 : 1];
 			for (int i=0; i<=incidence.Length; i++) {
 				sum += incidence[i];
 				if (sum >= rand) {

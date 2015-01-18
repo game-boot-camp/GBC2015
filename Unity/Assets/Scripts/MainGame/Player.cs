@@ -101,7 +101,7 @@ public class Player : MonoBehaviour {
 			break;
 		case Item.ItemType.SpecialColor:
 			message = "SpecialColor";
-			color = new Color(Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F), Random.Range(0.0F, 1.0F));
+			color = new Color(Random.Range(0.4F, 1.0F), Random.Range(0.4F, 1.0F), Random.Range(0.4F, 1.0F));
 			break;
 		case Item.ItemType.SpecialShape:
 			message = "SpecialShape";

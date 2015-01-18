@@ -19,6 +19,8 @@ public class ScrollManager : MonoBehaviour {
 	}
 
 	public void SpeedDown() {
-		scrollSpeed /= 1.2f;
+		if (scrollSpeed > 0.5f) {
+			scrollSpeed /= 1.2f;
+		}
 	}
 }
