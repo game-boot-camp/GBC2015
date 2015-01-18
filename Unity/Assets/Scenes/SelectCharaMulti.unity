@@ -85,6 +85,7 @@ GameObject:
   - 65: {fileID: 28017787}
   - 114: {fileID: 28017786}
   - 114: {fileID: 28017785}
+  - 114: {fileID: 28017788}
   m_Layer: 5
   m_Name: BTN_Next
   m_TagString: Untagged
@@ -154,6 +155,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &28017788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28017783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer2TypeNext
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &60717289
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +181,7 @@ GameObject:
   - 65: {fileID: 60717293}
   - 114: {fileID: 60717292}
   - 114: {fileID: 60717291}
+  - 114: {fileID: 60717294}
   m_Layer: 5
   m_Name: BTN_Red
   m_TagString: Untagged
@@ -233,6 +250,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &60717294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 60717289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer1Color1
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &77734032
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +276,7 @@ GameObject:
   - 65: {fileID: 77734036}
   - 114: {fileID: 77734035}
   - 114: {fileID: 77734034}
+  - 114: {fileID: 77734037}
   m_Layer: 5
   m_Name: BTN_Next
   m_TagString: Untagged
@@ -313,6 +346,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &77734037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77734032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer1TypeNext
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &104390431
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 104390431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
   m_Children: []
   m_Father: {fileID: 1024410794}
   m_RootOrder: 2
@@ -622,6 +670,7 @@ GameObject:
   - 65: {fileID: 445883750}
   - 114: {fileID: 445883749}
   - 114: {fileID: 445883748}
+  - 114: {fileID: 445883751}
   m_Layer: 5
   m_Name: BTN_Green
   m_TagString: Untagged
@@ -690,6 +739,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &445883751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445883746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer1Color2
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &446702338
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +860,7 @@ GameObject:
   - 65: {fileID: 647493228}
   - 114: {fileID: 647493227}
   - 114: {fileID: 647493226}
+  - 114: {fileID: 647493229}
   m_Layer: 5
   m_Name: BTN_Back
   m_TagString: Untagged
@@ -865,6 +930,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &647493229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647493224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer1TypePrev
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &788392843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1361,7 @@ GameObject:
   - 65: {fileID: 952165060}
   - 114: {fileID: 952165059}
   - 114: {fileID: 952165058}
+  - 114: {fileID: 952165061}
   m_Layer: 5
   m_Name: BTN_Green
   m_TagString: Untagged
@@ -1349,6 +1430,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &952165061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952165056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer2Color2
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &953250591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +1712,62 @@ Prefab:
     - target: {fileID: 178510, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
       propertyPath: m_Name
       value: GOD_SelectChara
+      objectReference: {fileID: 0}
+    - target: {fileID: 478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478472, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478552, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: mWidth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478550, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: aspectRatio
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478472, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: aspectRatio
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478468, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: aspectRatio
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478552, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
+      propertyPath: aspectRatio
+      value: .625
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d92eed9442b44394b97d4ec51cfb7bc9, type: 2}
@@ -2294,13 +2446,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .625
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -2554,13 +2706,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .625
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -2915,13 +3067,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .625
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -2957,6 +3109,7 @@ GameObject:
   - 65: {fileID: 1788787310}
   - 114: {fileID: 1788787309}
   - 114: {fileID: 1788787308}
+  - 114: {fileID: 1788787311}
   m_Layer: 5
   m_Name: BTN_Red
   m_TagString: Untagged
@@ -3025,6 +3178,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1788787311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788787306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer2Color1
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &1832988154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,7 +3305,7 @@ Transform:
   m_GameObject: {fileID: 1833426172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
   m_Children: []
   m_Father: {fileID: 499967811}
   m_RootOrder: 2
@@ -3152,6 +3320,7 @@ GameObject:
   - 65: {fileID: 1888295918}
   - 114: {fileID: 1888295917}
   - 114: {fileID: 1888295916}
+  - 114: {fileID: 1888295919}
   m_Layer: 5
   m_Name: BTN_Blue
   m_TagString: Untagged
@@ -3220,6 +3389,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1888295919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888295914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer1Color3
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &1951701832
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,13 +3729,13 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 48
+  mWidth: 30
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1
+  aspectRatio: .625
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 95a395e11f9414247a6a55c23903da52, type: 3}
   mFont: {fileID: 0}
@@ -3704,6 +3888,7 @@ GameObject:
   - 65: {fileID: 2026996545}
   - 114: {fileID: 2026996544}
   - 114: {fileID: 2026996543}
+  - 114: {fileID: 2026996546}
   m_Layer: 5
   m_Name: BTN_Back
   m_TagString: Untagged
@@ -3773,6 +3958,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120, y: 120, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2026996546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026996541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer2TypePrev
+  trigger: 0
+  includeChildren: 0
 --- !u!1 &2079258726
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,6 +4166,7 @@ GameObject:
   - 65: {fileID: 2146938306}
   - 114: {fileID: 2146938305}
   - 114: {fileID: 2146938304}
+  - 114: {fileID: 2146938307}
   m_Layer: 5
   m_Name: BTN_Blue
   m_TagString: Untagged
@@ -4034,3 +4235,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 80, y: 80, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2146938307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2146938302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c4ff40739c7904ca26c14ffbdc4176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 962801212}
+  functionName: ChangePlayer2Color3
+  trigger: 0
+  includeChildren: 0

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	private GameObject goAttach;
 	private GameObject stageChildTemplate;
 	private GameObject orbitTemplate;
+	private GameObject panel;
 	private ScrollManager scrollManager;
     
 	private const float SCREEN_WIDTH = 1136.0f;
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour {
 	private const string STAGE_END_PREFAB_PATH = "Prefabs/MainGame/Stage/GOD_03StageEnd";
 	private const string RESULT_PREFAB_PATH = "Prefabs/MainGame/Result/GOD_Result";
 	private const string ORBIT_PREFAB_PATH = "Prefabs/MainGame/Chara/GOD_Orbit";
+	private readonly Vector3 PLAYER1_DEFAULT_POSITION = new Vector3(-400.0F, 60.0F, 0.0F);
+	private readonly Vector3 PLAYER2_DEFAULT_POSITION = new Vector3(-180.0F, -120.0F, 0.0F);
 
 	public float Score { get; private set; }
 	public float Life { get; private set; }
@@ -35,9 +38,21 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		panel = GameObject.Find(PANEL_PATH);
+
+		GameObject player1 = Global.playerData[0].CreatePlayer();
+		GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>().target = player1;
+		player1.transform.parent = panel.transform;
+		player1.transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
+		player1.transform.localPosition = PLAYER1_DEFAULT_POSITION;
 		if (Global.playerCount == 1) {
-			GameObject.Find ("UI Root/Camera/Panel/GOD_Player02").SetActive(false);
-			GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>().target = GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Left").GetComponent<UIButtonMessage>().target;
+			GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>().target = player1;
+		} else {
+			GameObject player2 = Global.playerData[1].CreatePlayer();
+			GameObject.Find("UI Root/Camera/Panel/GOD_TouchCheck/BTN_Right").GetComponent<UIButtonMessage>().target = player2;
+			player2.transform.parent = panel.transform;
+			player2.transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
+			player2.transform.localPosition = PLAYER2_DEFAULT_POSITION;
 		}
 
 		goBackground = GameObject.Find(STAGE_PARENT_PATH);
@@ -93,9 +108,9 @@ public class GameManager : MonoBehaviour {
 									{
 										 GameObject orbit = (GameObject)Instantiate(orbitTemplate);
 										 orbit.transform.parent = goBackground.transform;
-						orbit.transform.localPosition = new Vector2(totalDistance, 0.0F) + (Vector2)p.gameObject.transform.localPosition;
+										 orbit.transform.localPosition = new Vector2(totalDistance, 0.0F) + (Vector2)p.gameObject.transform.localPosition;
 										 orbit.transform.localScale = new Vector3(1f, 1f, 1f);
-										 GameObject cco = orbit.FindInChildrenWithTag("ColorChangeObject");
+										 GameObject cco = orbit.FindInChildWithTag("ColorChangeObject");
 										 if (cco != null) {
 											 cco.GetComponent<UISprite>().color = p.color;
 										  }
@@ -117,7 +132,7 @@ public class GameManager : MonoBehaviour {
 			addStage((GameObject)Resources.Load(STAGE_END_PREFAB_PATH));
 
 			GameObject result = (GameObject)Instantiate(Resources.Load(RESULT_PREFAB_PATH));
-			result.transform.parent = GameObject.Find(PANEL_PATH).transform;
+			result.transform.parent = panel.transform;
 			result.transform.localScale = new Vector3(1f, 1f, 1f);
 			GameObject.FindGameObjectWithTag("Score").GetComponent<UILabel>().text = string.Format("{0:f3}メェ〜とる", Score);;
 		}

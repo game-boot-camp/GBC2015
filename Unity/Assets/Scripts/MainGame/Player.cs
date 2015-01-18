@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Player : MonoBehaviour {
 	private GameManager gameManager;
 	private ScrollManager scrollManager;
-	private GameObject colorChangeObject;
+	private GameObject[] body;
 
 	private const float NORMAL_SPEED = 150.0f;
 	private const float HIGH_SPEED = 500.0f;
+	private const string SPRITE_NAME = "Sheep_Body";
 
 	private int direction = 1;
 	private float speed = NORMAL_SPEED;
@@ -24,8 +27,10 @@ public class Player : MonoBehaviour {
 		GameObject gameScript = GameObject.Find("GameScript");
 		gameManager = gameScript.GetComponent<GameManager>();
 		scrollManager = gameScript.GetComponent<ScrollManager>();
-		colorChangeObject = gameObject.FindInChildrenWithTag("ColorChangeObject");
-		color = Color.white;
+		body = gameObject.FindInChildrenWithTag("ColorChangeObject");
+		if (color == new Color()) {
+			color = Color.white;
+		}
 	}
 	
 	// Update is called once per frame
@@ -41,8 +46,14 @@ public class Player : MonoBehaviour {
 				speed = NORMAL_SPEED;
 			}
 		}
-		if (colorChangeObject != null) {
-			colorChangeObject.GetComponent<UISprite>().color = color;
+		if (body != null) {
+			body.Select(b => b.GetComponent<UISprite>()).ToList().ForEach(s => s.color = color);
+			UISprite bodySprite = body.Where(b => b.name.EndsWith("Body")).First().GetComponent<UISprite>();
+			if (gameManager.Life > 0.0) {
+				bodySprite.spriteName = SPRITE_NAME + (5 - (int)System.Math.Ceiling(gameManager.Life / 0.25)).ToString("d2");
+			} else {
+				bodySprite.enabled = false;
+			}
 		}
 
 		this.transform.localPosition += new Vector3(0, speed * direction * Time.deltaTime, 0);

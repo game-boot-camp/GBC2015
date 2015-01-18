@@ -12,6 +12,21 @@ public class Global {
 	}
 
 	public class PlayerData {
-		public enum CharacterColor { }
+		public enum CharacterColor {
+			Color1,
+			Color2,
+			Color3
+		}
+
+		public CharacterColor color { get; set; }
+		public int CharacterType { get; set; }
+
+		private const string CHARA_PREFAB_PATH = "Prefabs/MainGame/Chara/GOD_Chara";
+
+		public GameObject CreatePlayer() {
+			var resource = Resources.Load(CHARA_PREFAB_PATH + (CharacterType + 1).ToString("d2"));
+			GameObject obj = (GameObject)Object.Instantiate(resource);
+			return obj;
+		}
 	}
 }
