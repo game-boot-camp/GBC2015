@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_AngleUp02
-    x: 868
-    y: 613
+    x: 933
+    y: 743
     width: 64
     height: 64
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_AngleUp03
-    x: 933
-    y: 743
+    x: 868
+    y: 678
     width: 64
     height: 64
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_Damage
-    x: 933
-    y: 678
+    x: 868
+    y: 613
     width: 64
     height: 64
     borderLeft: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_DamageStrong01
     x: 933
-    y: 613
+    y: 678
     width: 64
     height: 64
     borderLeft: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_DamageStrong02
-    x: 217
-    y: 526
+    x: 933
+    y: 613
     width: 64
     height: 64
     borderLeft: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_DamageStrong03
     x: 217
-    y: 461
+    y: 526
     width: 64
     height: 64
     borderLeft: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_LifeUp
     x: 217
-    y: 396
+    y: 461
     width: 64
     height: 64
     borderLeft: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_LifeUpStrong01
     x: 217
-    y: 331
+    y: 396
     width: 64
     height: 64
     borderLeft: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_LifeUpStrong02
-    x: 217
-    y: 266
+    x: 64
+    y: 92
     width: 64
     height: 64
     borderLeft: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_LifeUpStrong03
-    x: 64
+    x: 129
     y: 92
     width: 64
     height: 64
@@ -198,58 +198,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpecialColor
-    x: 129
-    y: 92
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_SpecialColorFx01
-    x: 0
-    y: 31
-    width: 32
-    height: 50
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_SpecialColorFx02
-    x: 217
-    y: 152
-    width: 32
-    height: 48
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_SpecialShape
-    x: 868
-    y: 678
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_SpecialShapeFX
     x: 64
     y: 27
     width: 64
@@ -262,11 +210,11 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Item_SpeedDown
-    x: 217
-    y: 201
-    width: 64
-    height: 64
+  - name: Item_SpecialColorFx01
+    x: 282
+    y: 479
+    width: 32
+    height: 50
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -275,7 +223,20 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Item_SpeedUp
+  - name: Item_SpecialColorFx02
+    x: 282
+    y: 430
+    width: 32
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_SpecialShape
     x: 129
     y: 27
     width: 64
@@ -288,8 +249,47 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Sheep_Body01
+  - name: Item_SpecialShapeFX
     x: 217
+    y: 331
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_SpeedDown
+    x: 217
+    y: 266
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_SpeedUp
+    x: 217
+    y: 201
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Sheep_Body01
+    x: 0
     y: 808
     width: 216
     height: 216
@@ -302,7 +302,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Sheep_Body02
-    x: 0
+    x: 217
     y: 808
     width: 216
     height: 216
@@ -432,7 +432,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Sheep_Horn03
-    x: 282
+    x: 343
     y: 551
     width: 65
     height: 39
@@ -475,6 +475,71 @@ MonoBehaviour:
     y: 821
     width: 75
     height: 69
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Stitch01
+    x: 0
+    y: 21
+    width: 60
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Stitch02
+    x: 217
+    y: 18
+    width: 60
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Stitch03
+    x: 282
+    y: 530
+    width: 60
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Stitch04
+    x: 217
+    y: 140
+    width: 60
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Stitch05
+    x: 217
+    y: 79
+    width: 60
+    height: 60
     borderLeft: 0
     borderRight: 0
     borderTop: 0
