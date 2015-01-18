@@ -45,7 +45,7 @@ public class SelectCharaManager : MonoBehaviour {
 	
 	void ChangePlayer1Color3() {
 		Global.playerData[0].color = Global.PlayerData.CharacterColor.Color3;
-		applyColor(player1Characters, new Color(97f/255, 232f/255, 244f/255););
+		applyColor(player1Characters, new Color(97f/255, 232f/255, 244f/255));
 	}
 	
 	void ChangePlayer2TypeNext() {
@@ -70,7 +70,7 @@ public class SelectCharaManager : MonoBehaviour {
 	
 	void ChangePlayer2Color3() {
 		Global.playerData[1].color = Global.PlayerData.CharacterColor.Color3;
-		applyColor(player2Characters, new Color(97f/255, 232f/255, 244f/255););
+		applyColor(player2Characters, new Color(97f/255, 232f/255, 244f/255));
 	}
 
 	private GameObject[] createCharacters(int playerNumber) {
