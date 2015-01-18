@@ -1,90 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &170514
+--- !u!1 &183246
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 470514}
-  - 114: {fileID: 11470514}
+  - 4: {fileID: 483246}
+  - 114: {fileID: 11483246}
   m_Layer: 0
-  m_Name: PictureBookAtlas
+  m_Name: ScoreAtlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &470514
+--- !u!4 &483246
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170514}
+  m_GameObject: {fileID: 183246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11470514
+--- !u!114 &11483246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170514}
+  m_GameObject: {fileID: 183246}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: d012ee9ce2cac73418deceab27c39680, type: 2}
+  material: {fileID: 2100000, guid: 09ce56d8241b5ff41938ffa4bb3fec40, type: 2}
   mSprites:
-  - name: Common_Back
-    x: 1501
-    y: 1935
+  - name: Score_Back
+    x: 0
+    y: 124
+    width: 1500
+    height: 900
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: SelectChara_BTNBack
+    x: 0
+    y: 10
     width: 529
     height: 113
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PictureBook_Back
-    x: 0
-    y: 247
-    width: 1500
-    height: 900
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PictureBook_BTNChara
-    x: 1501
-    y: 1766
-    width: 181
-    height: 168
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: PictureBookDitail_Back
-    x: 0
-    y: 1148
-    width: 1500
-    height: 900
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -106,6 +80,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 170514}
+  m_RootGameObject: {fileID: 183246}
   m_IsPrefabParent: 1
   m_IsExploded: 1

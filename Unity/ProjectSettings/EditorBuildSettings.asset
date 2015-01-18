@@ -18,6 +18,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PictureBook.unity
   - enabled: 1
+    path: Assets/Scenes/PictureBookDitail.unity
+  - enabled: 1
     path: Assets/Scenes/Record.unity
   - enabled: 1
     path: Assets/Scenes/HowToPlay01.unity
