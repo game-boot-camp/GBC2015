@@ -27,7 +27,7 @@ public class CreateItems : MonoBehaviour {
 
 	CreateItems () {
 		incidence[0] = new int[]{ 5, 50, 10, 20, 15, 10, 0, 10, 0 };
-		incidence[1] = new int[]{ 5, 50, 10, 20, 15, 10, 30, 20, 0 };
+		incidence[1] = new int[]{ 5, 50, 10, 20, 15, 10, 15, 20, 0 };
 	}
 
 	// Use this for initialization
