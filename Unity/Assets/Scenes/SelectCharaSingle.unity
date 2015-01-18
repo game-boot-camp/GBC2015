@@ -1860,7 +1860,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 30
+  mWidth: 48
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
@@ -2067,7 +2067,7 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 30
+  mWidth: 48
   mHeight: 48
   mDepth: 101
   autoResizeBoxCollider: 0
