@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void LifeUp() {
-		Life = Mathf.Min(1.0f, this.Life + 0.15f);
+		Life = Mathf.Min(1.0f, this.Life + 0.1f);
 		Debug.Log("Life: " + Life);
     }
 
