@@ -41,6 +41,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 511f880fb9ff6b049a1a2df074b6495e, type: 2}
   mSprites:
+  - name: Item_AngleUp01
+    x: 868
+    y: 743
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_AngleUp02
+    x: 868
+    y: 613
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_AngleUp03
+    x: 933
+    y: 743
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Item_ChangePosition
     x: 952
     y: 898
@@ -55,7 +94,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_Damage
-    x: 868
+    x: 933
     y: 678
     width: 64
     height: 64
@@ -68,46 +107,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_DamageStrong01
-    x: 129
-    y: 92
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_DamageStrong02
-    x: 64
-    y: 92
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_DamageStrong03
     x: 933
-    y: 743
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Item_LifeUp
-    x: 868
     y: 613
     width: 64
     height: 64
@@ -119,9 +119,48 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Item_DamageStrong02
+    x: 217
+    y: 526
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_DamageStrong03
+    x: 217
+    y: 461
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_LifeUp
+    x: 217
+    y: 396
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Item_LifeUpStrong01
-    x: 64
-    y: 27
+    x: 217
+    y: 331
     width: 64
     height: 64
     borderLeft: 0
@@ -133,8 +172,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_LifeUpStrong02
-    x: 129
-    y: 27
+    x: 217
+    y: 266
     width: 64
     height: 64
     borderLeft: 0
@@ -146,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_LifeUpStrong03
-    x: 868
-    y: 743
+    x: 64
+    y: 92
     width: 64
     height: 64
     borderLeft: 0
@@ -159,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpecialColor
-    x: 933
-    y: 678
+    x: 129
+    y: 92
     width: 64
     height: 64
     borderLeft: 0
@@ -186,7 +225,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Item_SpecialColorFx02
     x: 217
-    y: 477
+    y: 152
     width: 32
     height: 48
     borderLeft: 0
@@ -197,9 +236,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Item_SpecialShape
+    x: 868
+    y: 678
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Item_SpecialShapeFX
+    x: 64
+    y: 27
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Item_SpeedDown
-    x: 933
-    y: 613
+    x: 217
+    y: 201
     width: 64
     height: 64
     borderLeft: 0
@@ -211,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Item_SpeedUp
-    x: 217
-    y: 526
+    x: 129
+    y: 27
     width: 64
     height: 64
     borderLeft: 0
@@ -224,7 +289,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Sheep_Body01
-    x: 0
+    x: 217
     y: 808
     width: 216
     height: 216
@@ -237,7 +302,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Sheep_Body02
-    x: 217
+    x: 0
     y: 808
     width: 216
     height: 216
