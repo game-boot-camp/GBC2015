@@ -20,6 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Record.unity
   - enabled: 1
-    path: Assets/Scenes/HowToPlay.unity
+    path: Assets/Scenes/HowToPlay01.unity
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay02.unity
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay03.unity
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
